@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02ADE003190D8B3E00FC617F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE002190D8B3E00FC617F /* Foundation.framework */; };
+		02ADE005190D8B3E00FC617F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE004190D8B3E00FC617F /* CoreGraphics.framework */; };
+		02ADE007190D8B3E00FC617F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE006190D8B3E00FC617F /* UIKit.framework */; };
+		02ADE00D190D8B3E00FC617F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02ADE00B190D8B3E00FC617F /* InfoPlist.strings */; };
+		02ADE00F190D8B3E00FC617F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ADE00E190D8B3E00FC617F /* main.m */; };
+		02ADE013190D8B3E00FC617F /* MembershipCardAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ADE012190D8B3E00FC617F /* MembershipCardAppDelegate.m */; };
+		02ADE016190D8B3E00FC617F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02ADE014190D8B3E00FC617F /* Main.storyboard */; };
+		02ADE019190D8B3E00FC617F /* MembershipCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ADE018190D8B3E00FC617F /* MembershipCardViewController.m */; };
+		02ADE01B190D8B3E00FC617F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02ADE01A190D8B3E00FC617F /* Images.xcassets */; };
+		02ADE022190D8B3E00FC617F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE021190D8B3E00FC617F /* XCTest.framework */; };
+		02ADE023190D8B3E00FC617F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE002190D8B3E00FC617F /* Foundation.framework */; };
+		02ADE024190D8B3E00FC617F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE006190D8B3E00FC617F /* UIKit.framework */; };
+		02ADE02C190D8B3E00FC617F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02ADE02A190D8B3E00FC617F /* InfoPlist.strings */; };
+		02ADE02E190D8B3E00FC617F /* MembershipCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ADE02D190D8B3E00FC617F /* MembershipCardTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02ADE025190D8B3E00FC617F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02ADDFF7190D8B3E00FC617F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02ADDFFE190D8B3E00FC617F;
+			remoteInfo = MembershipCard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02ADDFFF190D8B3E00FC617F /* MembershipCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MembershipCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02ADE002190D8B3E00FC617F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		02ADE004190D8B3E00FC617F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		02ADE006190D8B3E00FC617F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		02ADE00A190D8B3E00FC617F /* MembershipCard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MembershipCard-Info.plist"; sourceTree = "<group>"; };
+		02ADE00C190D8B3E00FC617F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		02ADE00E190D8B3E00FC617F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		02ADE010190D8B3E00FC617F /* MembershipCard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MembershipCard-Prefix.pch"; sourceTree = "<group>"; };
+		02ADE011190D8B3E00FC617F /* MembershipCardAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MembershipCardAppDelegate.h; sourceTree = "<group>"; };
+		02ADE012190D8B3E00FC617F /* MembershipCardAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembershipCardAppDelegate.m; sourceTree = "<group>"; };
+		02ADE015190D8B3E00FC617F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02ADE017190D8B3E00FC617F /* MembershipCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MembershipCardViewController.h; sourceTree = "<group>"; };
+		02ADE018190D8B3E00FC617F /* MembershipCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembershipCardViewController.m; sourceTree = "<group>"; };
+		02ADE01A190D8B3E00FC617F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		02ADE020190D8B3E00FC617F /* MembershipCardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MembershipCardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02ADE021190D8B3E00FC617F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		02ADE029190D8B3E00FC617F /* MembershipCardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MembershipCardTests-Info.plist"; sourceTree = "<group>"; };
+		02ADE02B190D8B3E00FC617F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		02ADE02D190D8B3E00FC617F /* MembershipCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembershipCardTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02ADDFFC190D8B3E00FC617F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02ADE005190D8B3E00FC617F /* CoreGraphics.framework in Frameworks */,
+				02ADE007190D8B3E00FC617F /* UIKit.framework in Frameworks */,
+				02ADE003190D8B3E00FC617F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02ADE01D190D8B3E00FC617F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02ADE022190D8B3E00FC617F /* XCTest.framework in Frameworks */,
+				02ADE024190D8B3E00FC617F /* UIKit.framework in Frameworks */,
+				02ADE023190D8B3E00FC617F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02ADDFF6190D8B3E00FC617F = {
+			isa = PBXGroup;
+			children = (
+				02ADE008190D8B3E00FC617F /* MembershipCard */,
+				02ADE027190D8B3E00FC617F /* MembershipCardTests */,
+				02ADE001190D8B3E00FC617F /* Frameworks */,
+				02ADE000190D8B3E00FC617F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02ADE000190D8B3E00FC617F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02ADDFFF190D8B3E00FC617F /* MembershipCard.app */,
+				02ADE020190D8B3E00FC617F /* MembershipCardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02ADE001190D8B3E00FC617F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02ADE002190D8B3E00FC617F /* Foundation.framework */,
+				02ADE004190D8B3E00FC617F /* CoreGraphics.framework */,
+				02ADE006190D8B3E00FC617F /* UIKit.framework */,
+				02ADE021190D8B3E00FC617F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02ADE008190D8B3E00FC617F /* MembershipCard */ = {
+			isa = PBXGroup;
+			children = (
+				02ADE011190D8B3E00FC617F /* MembershipCardAppDelegate.h */,
+				02ADE012190D8B3E00FC617F /* MembershipCardAppDelegate.m */,
+				02ADE014190D8B3E00FC617F /* Main.storyboard */,
+				02ADE017190D8B3E00FC617F /* MembershipCardViewController.h */,
+				02ADE018190D8B3E00FC617F /* MembershipCardViewController.m */,
+				02ADE01A190D8B3E00FC617F /* Images.xcassets */,
+				02ADE009190D8B3E00FC617F /* Supporting Files */,
+			);
+			path = MembershipCard;
+			sourceTree = "<group>";
+		};
+		02ADE009190D8B3E00FC617F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02ADE00A190D8B3E00FC617F /* MembershipCard-Info.plist */,
+				02ADE00B190D8B3E00FC617F /* InfoPlist.strings */,
+				02ADE00E190D8B3E00FC617F /* main.m */,
+				02ADE010190D8B3E00FC617F /* MembershipCard-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		02ADE027190D8B3E00FC617F /* MembershipCardTests */ = {
+			isa = PBXGroup;
+			children = (
+				02ADE02D190D8B3E00FC617F /* MembershipCardTests.m */,
+				02ADE028190D8B3E00FC617F /* Supporting Files */,
+			);
+			path = MembershipCardTests;
+			sourceTree = "<group>";
+		};
+		02ADE028190D8B3E00FC617F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02ADE029190D8B3E00FC617F /* MembershipCardTests-Info.plist */,
+				02ADE02A190D8B3E00FC617F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02ADDFFE190D8B3E00FC617F /* MembershipCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02ADE031190D8B3E00FC617F /* Build configuration list for PBXNativeTarget "MembershipCard" */;
+			buildPhases = (
+				02ADDFFB190D8B3E00FC617F /* Sources */,
+				02ADDFFC190D8B3E00FC617F /* Frameworks */,
+				02ADDFFD190D8B3E00FC617F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MembershipCard;
+			productName = MembershipCard;
+			productReference = 02ADDFFF190D8B3E00FC617F /* MembershipCard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		02ADE01F190D8B3E00FC617F /* MembershipCardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02ADE034190D8B3E00FC617F /* Build configuration list for PBXNativeTarget "MembershipCardTests" */;
+			buildPhases = (
+				02ADE01C190D8B3E00FC617F /* Sources */,
+				02ADE01D190D8B3E00FC617F /* Frameworks */,
+				02ADE01E190D8B3E00FC617F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02ADE026190D8B3E00FC617F /* PBXTargetDependency */,
+			);
+			name = MembershipCardTests;
+			productName = MembershipCardTests;
+			productReference = 02ADE020190D8B3E00FC617F /* MembershipCardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02ADDFF7190D8B3E00FC617F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MembershipCard;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = com.hbu.com;
+				TargetAttributes = {
+					02ADE01F190D8B3E00FC617F = {
+						TestTargetID = 02ADDFFE190D8B3E00FC617F;
+					};
+				};
+			};
+			buildConfigurationList = 02ADDFFA190D8B3E00FC617F /* Build configuration list for PBXProject "MembershipCard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02ADDFF6190D8B3E00FC617F;
+			productRefGroup = 02ADE000190D8B3E00FC617F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02ADDFFE190D8B3E00FC617F /* MembershipCard */,
+				02ADE01F190D8B3E00FC617F /* MembershipCardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02ADDFFD190D8B3E00FC617F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02ADE01B190D8B3E00FC617F /* Images.xcassets in Resources */,
+				02ADE00D190D8B3E00FC617F /* InfoPlist.strings in Resources */,
+				02ADE016190D8B3E00FC617F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02ADE01E190D8B3E00FC617F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02ADE02C190D8B3E00FC617F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02ADDFFB190D8B3E00FC617F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02ADE013190D8B3E00FC617F /* MembershipCardAppDelegate.m in Sources */,
+				02ADE00F190D8B3E00FC617F /* main.m in Sources */,
+				02ADE019190D8B3E00FC617F /* MembershipCardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02ADE01C190D8B3E00FC617F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02ADE02E190D8B3E00FC617F /* MembershipCardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02ADE026190D8B3E00FC617F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02ADDFFE190D8B3E00FC617F /* MembershipCard */;
+			targetProxy = 02ADE025190D8B3E00FC617F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		02ADE00B190D8B3E00FC617F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02ADE00C190D8B3E00FC617F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		02ADE014190D8B3E00FC617F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02ADE015190D8B3E00FC617F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02ADE02A190D8B3E00FC617F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02ADE02B190D8B3E00FC617F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02ADE02F190D8B3E00FC617F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		02ADE030190D8B3E00FC617F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02ADE032190D8B3E00FC617F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MembershipCard/MembershipCard-Prefix.pch";
+				INFOPLIST_FILE = "MembershipCard/MembershipCard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		02ADE033190D8B3E00FC617F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MembershipCard/MembershipCard-Prefix.pch";
+				INFOPLIST_FILE = "MembershipCard/MembershipCard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		02ADE035190D8B3E00FC617F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MembershipCard.app/MembershipCard";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MembershipCard/MembershipCard-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MembershipCardTests/MembershipCardTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		02ADE036190D8B3E00FC617F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MembershipCard.app/MembershipCard";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MembershipCard/MembershipCard-Prefix.pch";
+				INFOPLIST_FILE = "MembershipCardTests/MembershipCardTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02ADDFFA190D8B3E00FC617F /* Build configuration list for PBXProject "MembershipCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02ADE02F190D8B3E00FC617F /* Debug */,
+				02ADE030190D8B3E00FC617F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02ADE031190D8B3E00FC617F /* Build configuration list for PBXNativeTarget "MembershipCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02ADE032190D8B3E00FC617F /* Debug */,
+				02ADE033190D8B3E00FC617F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		02ADE034190D8B3E00FC617F /* Build configuration list for PBXNativeTarget "MembershipCardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02ADE035190D8B3E00FC617F /* Debug */,
+				02ADE036190D8B3E00FC617F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02ADDFF7190D8B3E00FC617F /* Project object */;
+}
