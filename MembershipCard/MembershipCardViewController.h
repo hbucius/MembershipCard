@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MembershipCardViewController : UIViewController
+
+@interface MembershipCardViewController : UICollectionViewController
+
+@property(nonatomic) NSInteger index;
 
 @end

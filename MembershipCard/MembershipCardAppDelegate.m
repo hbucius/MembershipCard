@@ -7,12 +7,14 @@
 //
 
 #import "MembershipCardAppDelegate.h"
+#import "MyPageViewController.h"
 
 @implementation MembershipCardAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+       
     return YES;
 }
 							
