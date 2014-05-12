@@ -70,7 +70,8 @@ static BadgeInfos *sharedSingleton;
         NSArray *randomColors=@[[UIColor blueColor],[UIColor greenColor],[UIColor yellowColor],[UIColor magentaColor],[UIColor orangeColor],[UIColor purpleColor]];
         for(NSString *badgeName in badgesNames){
             UIColor *color=randomColors[arc4random()%randomColors.count];
-            [self addBadge:[[BadgeInfo alloc]initWithName:badgeName WithbackgroundColor:color withBadgeThumbImage:DefaultThumbImage]];
+         //   [self addBadge:[[BadgeInfo alloc]initWithName:badgeName WithbackgroundColor:color withBadgeThumbImage:DefaultThumbImage]];              
+            [self addBadge:[[BadgeInfo alloc]initWithName:badgeName WithbackgroundColor:color withBadgeThumbImage:DefaultThumbImage withBadgeImage:DefaultBadgeImage WithCardNumber:DefaultCardNumber withCardNumberLocation:[NSLocation right] withCardNmame:badgeName WithCardNameLocation:[NSLocation left]]];
         }
     }
     

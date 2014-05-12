@@ -33,6 +33,21 @@
     }
     return self;
 }
+-(instancetype) initWithName:(NSString *)badgeName WithbackgroundColor:(UIColor *)backgroundColor withBadgeThumbImage:(NSString*)badgeThumbImage withBadgeImage:(NSString*)badgeImage WithCardNumber:(NSString*) cardNumber withCardNumberLocation:(NSLocation*)cardNumberLocation withCardNmame:(NSString*) cardName WithCardNameLocation:(NSLocation*) cardNameLocation{
+    self=[super init];
+    if(self!=nil){
+        self.badgeName=badgeName;
+        self.badgeBackgroundColor=backgroundColor;
+        self.badgeThumbImage=badgeThumbImage;
+        self.badgeImage=badgeImage;
+        self.cardNumber=cardNumber;
+        self.cardNumberlocation=cardNumberLocation;
+        self.cardName=cardName;
+        self.cardNameLocation=cardNameLocation;
+    }
+    return self;
+}
+
 
 -(NSString *) defaultBadgeThumbImage{
     NSLog(@"get into defaultBadgeThumbImageURL");

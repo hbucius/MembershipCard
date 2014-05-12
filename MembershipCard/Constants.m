@@ -12,4 +12,9 @@
 NSString* const mainScreenTitle = @"会员卡";
 NSInteger const badgesCountInOnePage=12;
 NSString * const DefaultThumbImage=@"0.JPG";
+NSString * const DefaultBadgeImage=@"2.JPG";
+NSString * const DefaultCardName=@"Nike";
+NSString * const DefaultCardNumber=@"62220201220";
+
+
 @end

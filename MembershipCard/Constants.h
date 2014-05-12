@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "NSLocation.h"
 @interface Constants : NSObject
 
 extern NSString * const mainScreenTitle;
 extern NSInteger const badgesCountInOnePage;
 extern NSString * const DefaultThumbImage;
+extern NSString * const DefaultBadgeImage;
+extern NSString * const DefaultCardName;
+extern NSString * const DefaultCardNumber;
+extern SEL selector;
 @end

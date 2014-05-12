@@ -10,4 +10,9 @@
 
 @interface OneCardViewController : UIViewController
 @property(strong,nonatomic) UIImage *image;
+@property(nonatomic) NSInteger index; // the index in badgeInfos ,start from 0
+@property (weak, nonatomic) IBOutlet UILabel *cardName;
+@property (weak, nonatomic) IBOutlet UILabel *cardNumber;
+@property (weak, nonatomic) IBOutlet UIImageView *cardBackgroundImage;
+
 @end

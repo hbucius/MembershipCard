@@ -7,10 +7,11 @@
 //
 
 #import "OneCardViewController.h"
-
+#import "BadgeInfo.h"
+#import "BadgeInfos.h"
 @interface OneCardViewController ()
+@property (weak, nonatomic) IBOutlet UIView *CardView;
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
 @implementation OneCardViewController
@@ -27,9 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.imageView.image=self.image;
-
-    // Do any additional setup after loading the view.
+    self.CardView.backgroundColor=[UIColor yellowColor];
+    [self initWithIndex:self.index];
+    
+    
+     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,21 +41,60 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+-(void) setIndex:(NSInteger)index {
+    _index=index;
+  //  [self initWithIndex:_index];
+    
 }
-*/
-
--(void) setImage:(UIImage *)image{
-    _image=image;
-    self.imageView.image=image;
-    NSLog(@"has been set IMage");
+-(void) initWithIndex:(NSInteger)index{
+    NSLog(@"oneCardViewController ,the index is %d",index);
+    BadgeInfo *badgeInfo=[[BadgeInfos shareInstance] badgeAtIndex:index];
+    [self initCard:badgeInfo];
 }
 
+-(void) initCard :(BadgeInfo *) badgeInfo{
+    self.CardView.backgroundColor=badgeInfo.badgeBackgroundColor;
+
+    //cardName
+    if(badgeInfo.cardNameLocation.simpleLayout ){
+        NSMutableParagraphStyle *paragraphCardName=[[NSMutableParagraphStyle alloc]init];
+        if([badgeInfo.cardNameLocation isEqual:@"left"]){
+            paragraphCardName.alignment=NSTextAlignmentLeft;
+        }
+        else if([badgeInfo.cardNameLocation isEqual:@"right"]){
+            paragraphCardName.alignment=NSTextAlignmentRight;
+        }
+        else paragraphCardName.alignment=NSTextAlignmentLeft;  //default alignment
+        self.cardName.attributedText=[[NSAttributedString alloc]initWithString:badgeInfo.cardName attributes:@{NSParagraphStyleAttributeName: paragraphCardName ,
+                                                                                                               NSForegroundColorAttributeName:[UIColor whiteColor]  //cardName color
+                                                                                                               }];
+        
+    }
+    else {    }  // not simple layout
+    
+    //cardNumber
+    if(badgeInfo.cardNumberlocation.simpleLayout ){
+        NSMutableParagraphStyle *paragraphCardumber=[[NSMutableParagraphStyle alloc]init];
+        if([badgeInfo.cardNumberlocation isEqual:@"left"]){
+            paragraphCardumber.alignment=NSTextAlignmentLeft;
+        }
+        else if([badgeInfo.cardNumberlocation isEqual:@"right"]){
+            paragraphCardumber.alignment=NSTextAlignmentRight;
+        }
+        else paragraphCardumber.alignment=NSTextAlignmentRight;  //default alignment
+        self.cardNumber.attributedText=[[NSAttributedString alloc]initWithString:badgeInfo.cardNumber attributes:@{NSParagraphStyleAttributeName: paragraphCardumber,
+                                                                                                                   NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    }
+    else {    }  // not simple layout
+    
+    //cardBackgroundImage
+    self.cardBackgroundImage.image=[UIImage imageNamed:badgeInfo.badgeImage];
+    
+    
+    
+    
+}
 @end

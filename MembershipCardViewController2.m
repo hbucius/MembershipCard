@@ -111,19 +111,28 @@ NSString *kDetailViewControllerID=@"OneCardView";
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    NSLog(@"I am out for segue");
+    NSLog(@"I am entering prepairing for segue");
     
     if([[segue identifier] isEqualToString:@"showOneCard"]){
         if([[segue destinationViewController] isKindOfClass:[OneCardViewController class]]){
-            //set the image
-            NSLog(@"I am in prepair for segue");
-            OneCardViewController *oneCardController=segue.destinationViewController;
-            NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
-            NSString *imageToLoad=[NSString stringWithFormat:@"%d_full",selectedIndexPath.row];
-            NSString *imagePath=[[NSBundle mainBundle]pathForResource:imageToLoad ofType:@"JPG"];
-            oneCardController.image=[[UIImage alloc] initWithContentsOfFile:imagePath];        }
-    }
+            NSLog(@"I am in prepair for segue to showOneCard");
+            [self prepareForShowOneCard:segue sender:sender];
+           }
+        
 }
 
+}
 
+-(void) prepareForShowOneCard:(UIStoryboardSegue *) segue sender:(id) sender{
+    
+    OneCardViewController *oneCardController=segue.destinationViewController;
+    if([sender isKindOfClass:[UIButton class]] && [[[sender superview]superview] isKindOfClass:[UICollectionViewCell class]]){
+        UICollectionViewCell *selectedCell=(UICollectionViewCell *)([sender superview].superview);
+        NSIndexPath *path=[self.collectionView indexPathForCell:selectedCell];
+        oneCardController.index=path.row+self.index*badgesCountInOnePage;        
+    }
+    //NSArray *selectedItem=[self.collectionView indexPathsForSelectedItems];
+ 
+
+}
 @end

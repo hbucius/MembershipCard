@@ -77,6 +77,8 @@
 		023978BC19120E83007548F3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 023978B519120260007548F3 /* Constants.m */; };
 		023978BF19148FDA007548F3 /* BadgeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 023978BE19148FDA007548F3 /* BadgeInfo.m */; };
 		023978C219149067007548F3 /* BadgeInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 023978C119149067007548F3 /* BadgeInfos.m */; };
+		02491722191DE5E700A24283 /* cardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02491721191DE5E700A24283 /* cardView.m */; };
+		02491725191DEAD800A24283 /* NSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 02491724191DEAD800A24283 /* NSLocation.m */; };
 		02ADE003190D8B3E00FC617F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE002190D8B3E00FC617F /* Foundation.framework */; };
 		02ADE005190D8B3E00FC617F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE004190D8B3E00FC617F /* CoreGraphics.framework */; };
 		02ADE007190D8B3E00FC617F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE006190D8B3E00FC617F /* UIKit.framework */; };
@@ -106,8 +108,8 @@
 /* Begin PBXFileReference section */
 		021AB8561918176100635CBE /* MembershipCardViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MembershipCardViewController2.h; sourceTree = SOURCE_ROOT; };
 		021AB8571918176100635CBE /* MembershipCardViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MembershipCardViewController2.m; sourceTree = SOURCE_ROOT; };
-		021E41BA190EDAFA00091B26 /* OneCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneCardViewController.h; sourceTree = "<group>"; };
-		021E41BB190EDAFA00091B26 /* OneCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneCardViewController.m; sourceTree = "<group>"; };
+		021E41BA190EDAFA00091B26 /* OneCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneCardViewController.h; path = MembershipCard/OneCardViewController.h; sourceTree = "<group>"; };
+		021E41BB190EDAFA00091B26 /* OneCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneCardViewController.m; path = MembershipCard/OneCardViewController.m; sourceTree = "<group>"; };
 		021E41C0190EDF6300091B26 /* 0_full.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0_full.JPG; sourceTree = "<group>"; };
 		021E41C1190EDF6300091B26 /* 10_full.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10_full.JPG; sourceTree = "<group>"; };
 		021E41C2190EDF6300091B26 /* 11_full.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11_full.JPG; sourceTree = "<group>"; };
@@ -172,14 +174,18 @@
 		021E421E190EDF6900091B26 /* 7.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.JPG; sourceTree = "<group>"; };
 		021E421F190EDF6900091B26 /* 8.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.JPG; sourceTree = "<group>"; };
 		021E4220190EDF6900091B26 /* 9.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.JPG; sourceTree = "<group>"; };
-		023978B11911A8CF007548F3 /* MyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageViewController.h; sourceTree = "<group>"; };
-		023978B21911A8CF007548F3 /* MyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageViewController.m; sourceTree = "<group>"; };
-		023978B419120260007548F3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		023978B519120260007548F3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		023978B11911A8CF007548F3 /* MyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPageViewController.h; path = MembershipCard/MyPageViewController.h; sourceTree = "<group>"; };
+		023978B21911A8CF007548F3 /* MyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPageViewController.m; path = MembershipCard/MyPageViewController.m; sourceTree = "<group>"; };
+		023978B419120260007548F3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = MembershipCard/Constants.h; sourceTree = "<group>"; };
+		023978B519120260007548F3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = MembershipCard/Constants.m; sourceTree = "<group>"; };
 		023978BD19148FDA007548F3 /* BadgeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BadgeInfo.h; path = MembershipCard/BadgeInfo.h; sourceTree = "<group>"; };
 		023978BE19148FDA007548F3 /* BadgeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BadgeInfo.m; path = MembershipCard/BadgeInfo.m; sourceTree = "<group>"; };
 		023978C019149067007548F3 /* BadgeInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BadgeInfos.h; path = MembershipCard/BadgeInfos.h; sourceTree = "<group>"; };
 		023978C119149067007548F3 /* BadgeInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BadgeInfos.m; path = MembershipCard/BadgeInfos.m; sourceTree = "<group>"; };
+		02491720191DE5E700A24283 /* cardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardView.h; sourceTree = "<group>"; };
+		02491721191DE5E700A24283 /* cardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardView.m; sourceTree = "<group>"; };
+		02491723191DEAD800A24283 /* NSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLocation.h; sourceTree = "<group>"; };
+		02491724191DEAD800A24283 /* NSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLocation.m; sourceTree = "<group>"; };
 		02ADDFFF190D8B3E00FC617F /* MembershipCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MembershipCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02ADE002190D8B3E00FC617F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		02ADE004190D8B3E00FC617F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -197,8 +203,8 @@
 		02ADE029190D8B3E00FC617F /* MembershipCardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MembershipCardTests-Info.plist"; sourceTree = "<group>"; };
 		02ADE02B190D8B3E00FC617F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		02ADE02D190D8B3E00FC617F /* MembershipCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembershipCardTests.m; sourceTree = "<group>"; };
-		02ADE037190D94E800FC617F /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
-		02ADE038190D94E800FC617F /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		02ADE037190D94E800FC617F /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cell.h; path = MembershipCard/Cell.h; sourceTree = "<group>"; };
+		02ADE038190D94E800FC617F /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cell.m; path = MembershipCard/Cell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +238,7 @@
 				021E41BF190EDF6300091B26 /* full */,
 			);
 			name = images;
+			path = MembershipCard;
 			sourceTree = "<group>";
 		};
 		021E41BF190EDF6300091B26 /* full */ = {
@@ -323,9 +330,49 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		0249171E191DE2B500A24283 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				023978B11911A8CF007548F3 /* MyPageViewController.h */,
+				023978B21911A8CF007548F3 /* MyPageViewController.m */,
+				021E41BA190EDAFA00091B26 /* OneCardViewController.h */,
+				021E41BB190EDAFA00091B26 /* OneCardViewController.m */,
+				021AB8561918176100635CBE /* MembershipCardViewController2.h */,
+				021AB8571918176100635CBE /* MembershipCardViewController2.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0249171F191DE2C900A24283 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02ADE014190D8B3E00FC617F /* Main.storyboard */,
+				02ADE037190D94E800FC617F /* Cell.h */,
+				02ADE038190D94E800FC617F /* Cell.m */,
+				02491720191DE5E700A24283 /* cardView.h */,
+				02491721191DE5E700A24283 /* cardView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		02491726191DEADE00A24283 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				023978B419120260007548F3 /* Constants.h */,
+				023978B519120260007548F3 /* Constants.m */,
+				02491723191DEAD800A24283 /* NSLocation.h */,
+				02491724191DEAD800A24283 /* NSLocation.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		02ADDFF6190D8B3E00FC617F = {
 			isa = PBXGroup;
 			children = (
+				021E41BE190EDF0900091B26 /* images */,
+				02491726191DEADE00A24283 /* Utils */,
+				0249171F191DE2C900A24283 /* View */,
+				0249171E191DE2B500A24283 /* Controller */,
 				023978C319149078007548F3 /* Model */,
 				02ADE008190D8B3E00FC617F /* MembershipCard */,
 				02ADE027190D8B3E00FC617F /* MembershipCardTests */,
@@ -357,16 +404,6 @@
 		02ADE008190D8B3E00FC617F /* MembershipCard */ = {
 			isa = PBXGroup;
 			children = (
-				021AB8561918176100635CBE /* MembershipCardViewController2.h */,
-				021AB8571918176100635CBE /* MembershipCardViewController2.m */,
-				021E41BE190EDF0900091B26 /* images */,
-				02ADE014190D8B3E00FC617F /* Main.storyboard */,
-				023978B11911A8CF007548F3 /* MyPageViewController.h */,
-				023978B21911A8CF007548F3 /* MyPageViewController.m */,
-				021E41BA190EDAFA00091B26 /* OneCardViewController.h */,
-				021E41BB190EDAFA00091B26 /* OneCardViewController.m */,
-				02ADE037190D94E800FC617F /* Cell.h */,
-				02ADE038190D94E800FC617F /* Cell.m */,
 				02ADE01A190D8B3E00FC617F /* Images.xcassets */,
 				02ADE009190D8B3E00FC617F /* Supporting Files */,
 			);
@@ -376,8 +413,6 @@
 		02ADE009190D8B3E00FC617F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				023978B419120260007548F3 /* Constants.h */,
-				023978B519120260007548F3 /* Constants.m */,
 				02ADE011190D8B3E00FC617F /* MembershipCardAppDelegate.h */,
 				02ADE012190D8B3E00FC617F /* MembershipCardAppDelegate.m */,
 				02ADE00A190D8B3E00FC617F /* MembershipCard-Info.plist */,
@@ -573,9 +608,11 @@
 				023978C219149067007548F3 /* BadgeInfos.m in Sources */,
 				02ADE00F190D8B3E00FC617F /* main.m in Sources */,
 				023978B31911A8CF007548F3 /* MyPageViewController.m in Sources */,
+				02491725191DEAD800A24283 /* NSLocation.m in Sources */,
 				023978BF19148FDA007548F3 /* BadgeInfo.m in Sources */,
 				021AB8581918176100635CBE /* MembershipCardViewController2.m in Sources */,
 				023978BC19120E83007548F3 /* Constants.m in Sources */,
+				02491722191DE5E700A24283 /* cardView.m in Sources */,
 				021E41BC190EDAFA00091B26 /* OneCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +650,7 @@
 				02ADE015190D8B3E00FC617F /* Base */,
 			);
 			name = Main.storyboard;
+			path = MembershipCard;
 			sourceTree = "<group>";
 		};
 		02ADE02A190D8B3E00FC617F /* InfoPlist.strings */ = {
