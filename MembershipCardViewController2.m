@@ -49,9 +49,9 @@ NSString *kDetailViewControllerID=@"OneCardView";
 
 #pragma mark properties
 
--(void) setIndex:(int)index{
+-(void) setIndex:(NSInteger)index{
     _index=index;
-    NSLog(@"index become %d in collection",_index);
+    NSLog(@"index become %ld in collection",(long)_index);
     //set the special according the index ; need to be done here
 }
 
@@ -63,7 +63,7 @@ NSString *kDetailViewControllerID=@"OneCardView";
 }
 
 
-#pragma mark collectionView delegate
+#pragma mark collectionView datasource
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return badgesCountInOnePage;
@@ -75,7 +75,7 @@ NSString *kDetailViewControllerID=@"OneCardView";
 
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     Cell *cell =[collectionView dequeueReusableCellWithReuseIdentifier:kCellId forIndexPath:indexPath];
-    NSLog(@"cellForItemAtIndexPath :index=%d",self.index);
+    NSLog(@"cellForItemAtIndexPath :index=%ld",(long)self.index);
     BadgeInfo *badge=[self.badgeInfos badgeAtIndex:(indexPath.row+self.index*badgesCountInOnePage)];
     if(badge!=nil){
         cell.CellLabel.text=badge.badgeName;
@@ -88,11 +88,48 @@ NSString *kDetailViewControllerID=@"OneCardView";
     return cell;
 }
 
+#pragma mark UICollectionViewDelegateFlowLayout protocal
 
+-(CGFloat) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    CGRect screenBounds=[[UIScreen mainScreen]bounds];
+    if(screenBounds.size.height==568) //4 inch
+    {
+        return 20.0;
+    }
+    
+    else{ //3.5 inch
+        return 5.0;
+    }
+}
+
+-(CGFloat) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
+    CGRect screenBounds=[[UIScreen mainScreen]bounds];
+    if(screenBounds.size.height==568)
+    {
+        return 10.0;
+    }
+    
+    else{
+        return 10.0;
+    }
+}
+
+-(UIEdgeInsets) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    CGRect screenBounds=[[UIScreen mainScreen]bounds];
+    if(screenBounds.size.height==568)
+    {
+        return UIEdgeInsetsMake(20, 20, 0, 20);
+    }
+    
+    else{
+        return UIEdgeInsetsMake(9, 20, 0, 20);
+    }
+    
+}
 
 #pragma mark PageView delegate
 
-
+/**
 -(MembershipCardViewController2 *) MembershipCardViewControllerForPageIndex{
     
     return self;
@@ -105,7 +142,7 @@ NSString *kDetailViewControllerID=@"OneCardView";
     
 }
 
-
+**/
 
 #pragma mark Segue to OneCard
 

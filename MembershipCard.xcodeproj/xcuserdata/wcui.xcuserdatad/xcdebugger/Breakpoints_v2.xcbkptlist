@@ -228,15 +228,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCardViewController2.m"
-            timestampString = "421387305.937663"
+            timestampString = "421787412.718056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "@implementation MembershipCardViewController2"
             landmarkType = "3">
          </BreakpointContent>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCardViewController2.m"
-            timestampString = "421388615.302592"
+            timestampString = "421787412.718056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "-prepareForShowOneCard:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -280,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCardViewController2.m"
-            timestampString = "421387305.937663"
+            timestampString = "421787412.718056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "-prepareForShowOneCard:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -296,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCardViewController2.m"
-            timestampString = "421387360.721081"
+            timestampString = "421787412.718056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "-prepareForShowOneCard:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -334,6 +334,22 @@
             startingLineNumber = "36"
             endingLineNumber = "36"
             landmarkName = "-isEqual:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MembershipCardViewController2.m"
+            timestampString = "421701022.133992"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-setIndex:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

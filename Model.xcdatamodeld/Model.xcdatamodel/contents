@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Badge" representedClassName="Badge" syncable="YES">
+        <attribute name="badgeBackgroundColor" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="badgeImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="badgeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="badgeThumbImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardNameColor" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="cardNameLocation" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="cardNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cardNumberColor" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="cardNumberlocation" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Badge" positionX="-6030" positionY="-792" width="128" height="193"/>
+    </elements>
+</model>

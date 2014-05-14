@@ -50,7 +50,7 @@
     
 }
 -(void) initWithIndex:(NSInteger)index{
-    NSLog(@"oneCardViewController ,the index is %d",index);
+    NSLog(@"oneCardViewController ,the index is %ld",(long)index);
     BadgeInfo *badgeInfo=[[BadgeInfos shareInstance] badgeAtIndex:index];
     [self initCard:badgeInfo];
 }

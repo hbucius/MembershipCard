@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MembershipCardViewController2 : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface MembershipCardViewController2 : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(nonatomic) NSInteger index;
 @end

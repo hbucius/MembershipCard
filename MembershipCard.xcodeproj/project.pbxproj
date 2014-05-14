@@ -93,6 +93,8 @@
 		02ADE02C190D8B3E00FC617F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02ADE02A190D8B3E00FC617F /* InfoPlist.strings */; };
 		02ADE02E190D8B3E00FC617F /* MembershipCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ADE02D190D8B3E00FC617F /* MembershipCardTests.m */; };
 		02ADE039190D94E800FC617F /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ADE038190D94E800FC617F /* Cell.m */; };
+		02BE726B1923F84B00A14D36 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02BE72691923F84B00A14D36 /* Model.xcdatamodeld */; };
+		02BE726E1923F99700A14D36 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE726D1923F99700A14D36 /* Badge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +207,9 @@
 		02ADE02D190D8B3E00FC617F /* MembershipCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembershipCardTests.m; sourceTree = "<group>"; };
 		02ADE037190D94E800FC617F /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cell.h; path = MembershipCard/Cell.h; sourceTree = "<group>"; };
 		02ADE038190D94E800FC617F /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cell.m; path = MembershipCard/Cell.m; sourceTree = "<group>"; };
+		02BE726A1923F84B00A14D36 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		02BE726C1923F99700A14D36 /* Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badge.h; sourceTree = "<group>"; };
+		02BE726D1923F99700A14D36 /* Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +328,9 @@
 			isa = PBXGroup;
 			children = (
 				023978BD19148FDA007548F3 /* BadgeInfo.h */,
+				02BE72691923F84B00A14D36 /* Model.xcdatamodeld */,
+				02BE726C1923F99700A14D36 /* Badge.h */,
+				02BE726D1923F99700A14D36 /* Badge.m */,
 				023978C019149067007548F3 /* BadgeInfos.h */,
 				023978C119149067007548F3 /* BadgeInfos.m */,
 				023978BE19148FDA007548F3 /* BadgeInfo.m */,
@@ -603,6 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BE726E1923F99700A14D36 /* Badge.m in Sources */,
 				02ADE013190D8B3E00FC617F /* MembershipCardAppDelegate.m in Sources */,
 				02ADE039190D94E800FC617F /* Cell.m in Sources */,
 				023978C219149067007548F3 /* BadgeInfos.m in Sources */,
@@ -614,6 +623,7 @@
 				023978BC19120E83007548F3 /* Constants.m in Sources */,
 				02491722191DE5E700A24283 /* cardView.m in Sources */,
 				021E41BC190EDAFA00091B26 /* OneCardViewController.m in Sources */,
+				02BE726B1923F84B00A14D36 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,6 +841,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		02BE72691923F84B00A14D36 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				02BE726A1923F84B00A14D36 /* Model.xcdatamodel */,
+			);
+			currentVersion = 02BE726A1923F84B00A14D36 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 02ADDFF7190D8B3E00FC617F /* Project object */;
 }

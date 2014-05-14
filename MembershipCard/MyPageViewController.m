@@ -59,7 +59,7 @@
 }
 
 -(void) initPageNumber{
-    int badgesCount=[[BadgeInfos shareInstance]badgesCount];
+    NSInteger badgesCount=[[BadgeInfos shareInstance]badgesCount];
     self.maxIndex=(NSInteger)((badgesCount+badgesCountInOnePage-1)/badgesCountInOnePage)-1;
 }
 
@@ -115,7 +115,7 @@
 #pragma pageView delegate
 
 - (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index{
-    NSLog(@"parameter: self.maxIndex=%d,index=%d",self.maxIndex,index);
+    NSLog(@"parameter: self.maxIndex=%ld,index=%ld",(long)self.maxIndex,(long)index);
     //if the page number ==1 ,don't permit cycle from the last page to the first page or reverse.
     if (self.maxIndex==0 && index!=0)  return nil;
     if (index<0 || index>self.maxIndex) {
@@ -136,7 +136,7 @@
    {;
        NSLog(@"MembershipCardCollectionPage is not nil");
       _indexOnScreen=index;
-       NSLog(@"_indexOnScreen become %d",_indexOnScreen);
+       NSLog(@"_indexOnScreen become %ld",(long)_indexOnScreen);
       MembershipCardCollectionPage.index=_indexOnScreen;
    }
    else NSLog(@"MembershipCardCollectionPage is  nil");
