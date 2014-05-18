@@ -51,15 +51,15 @@
 }
 -(void) initWithIndex:(NSInteger)index{
     NSLog(@"oneCardViewController ,the index is %ld",(long)index);
-    BadgeInfo *badgeInfo=[[BadgeInfos shareInstance] badgeAtIndex:index];
-    [self initCard:badgeInfo];
+    Badge *badge=[[BadgeInfos shareInstance] badgeAtIndex:index];
+    [self initCard:badge];
 }
 
--(void) initCard :(BadgeInfo *) badgeInfo{
+-(void) initCard :(Badge *) badgeInfo{
     self.CardView.backgroundColor=badgeInfo.badgeBackgroundColor;
 
     //cardName
-    if(badgeInfo.cardNameLocation.simpleLayout ){
+    if([badgeInfo.cardNameLocation simpleLayout] ){
         NSMutableParagraphStyle *paragraphCardName=[[NSMutableParagraphStyle alloc]init];
         if([badgeInfo.cardNameLocation isEqual:@"left"]){
             paragraphCardName.alignment=NSTextAlignmentLeft;
@@ -76,7 +76,7 @@
     else {    }  // not simple layout
     
     //cardNumber
-    if(badgeInfo.cardNumberlocation.simpleLayout ){
+    if([badgeInfo.cardNumberlocation simpleLayout]){
         NSMutableParagraphStyle *paragraphCardumber=[[NSMutableParagraphStyle alloc]init];
         if([badgeInfo.cardNumberlocation isEqual:@"left"]){
             paragraphCardumber.alignment=NSTextAlignmentLeft;

@@ -43,7 +43,22 @@
     else return false;
 }
 
+-(id) initWithCoder:(NSCoder *)aDecoder{
+    self=[super init];
+    if(self) {
+        _simpleLayout =[aDecoder decodeBoolForKey:@"SimpleLayout"];
+        _direction=[aDecoder decodeObjectForKey:@"Directon"];
+    }
+    NSLog(@"decode location is finished");
+    return self;    
+}
 
-
+-(void) encodeWithCoder:(NSCoder *)aCoder {
+    
+    [aCoder encodeObject:self.direction forKey:@"Directon"];
+    [aCoder encodeBool:self.simpleLayout forKey:@"SimpleLayout"];
+    NSLog(@"encode location is finished.");
+    
+}
 
 @end

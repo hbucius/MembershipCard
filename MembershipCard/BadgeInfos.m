@@ -7,8 +7,8 @@
 //
 
 #import "BadgeInfos.h"
-
-
+#import "Constants.h"
+#import "DataController.h"
 @interface BadgeInfos()
 
 
@@ -19,6 +19,7 @@
 #pragma mark singleton;
 
 static BadgeInfos *sharedSingleton;
+
 +(void) initialize{
     static BOOL initialized=NO;
     if(!initialized){
@@ -36,11 +37,13 @@ static BadgeInfos *sharedSingleton;
 
 # pragma mark operations in badge array
 
--(void ) addBadge:(BadgeInfo *) badge {
-    if([badge isKindOfClass:[BadgeInfo class]])
-        [self.badges addObject:badge];
+-(void ) addBadge:(Badge *) badge{
+    if([badge isKindOfClass:[Badge class]]){
+      [self.badges addObject:badge];
+    }
+    
 }
--(void)  deleteBadgeWithName:(NSString *) label{
+-(void)  deleteBadgeWithName:(NSString *) name{
     
     
 }
@@ -54,11 +57,32 @@ static BadgeInfos *sharedSingleton;
 
 -(NSMutableArray *) badges{
     if (_badges==nil) {
-        _badges=[[NSMutableArray alloc]init];
+        //put the NSManagedObject to the array
+        NSEntityDescription *entityDescription=[NSEntityDescription entityForName:@"Badge" inManagedObjectContext:self.context];
+        NSFetchRequest *fetchRequest=[[NSFetchRequest alloc]init];
+        [fetchRequest setEntity:entityDescription];
+        NSError *erro;
+        NSArray *array=[self.context executeFetchRequest:fetchRequest error:&erro];
+        NSLog(@"badges: the nubmer of badges is %d" ,array.count);
+        if (array==nil) {
+            NSLog(@"badges are  nil from database");
+        }
+        else {
+            NSLog(@"badges are not nil from database");
+            _badges=[[NSMutableArray alloc] initWithArray:array];
+        }
+        
     }
     return _badges;
 }
 
+-(NSManagedObjectContext *) context {
+    if(_context==nil) {
+        _context=[DataController shareInstance].context;
+        NSLog(@"_context is get for the first time");
+    }
+    return  _context;
+}
 
 # pragma mark init
 -(instancetype) initRandomBadges{
@@ -66,13 +90,12 @@ static BadgeInfos *sharedSingleton;
     if(self)
     {
         NSArray *badgesNames=@[@"李宁",@"嘉和一品",@"老驴头",@"海底捞", @"乔丹",@"乙醇",@"麻辣香锅(知春路店)",@"老北京炸酱面",@"城隍庙小吃",@"樊家",@"庆丰包子1",@"庆丰包子2",@"庆丰包子3",@"李宁",@"嘉和一品",@"老驴头",@"海底捞", @"乔丹",@"乙醇",@"麻辣香锅(知春路店)",@"老北京炸酱面",@"城隍庙小吃",@"樊家",@"庆丰包子1",@"庆丰包子2",@"庆丰包子3"];
-    //    NSArray *badgesNames=@[@"李宁",@"嘉和一品",@"老驴头",@"海底捞", @"乔丹",@"乙醇",@"麻辣香锅",@"老北京炸酱面",@"城隍庙小吃",@"樊家",@"庆丰包子1"];
-        NSArray *randomColors=@[[UIColor blueColor],[UIColor greenColor],[UIColor yellowColor],[UIColor magentaColor],[UIColor orangeColor],[UIColor purpleColor]];
-        for(NSString *badgeName in badgesNames){
-            UIColor *color=randomColors[arc4random()%randomColors.count];
-         //   [self addBadge:[[BadgeInfo alloc]initWithName:badgeName WithbackgroundColor:color withBadgeThumbImage:DefaultThumbImage]];              
-            [self addBadge:[[BadgeInfo alloc]initWithName:badgeName WithbackgroundColor:color withBadgeThumbImage:DefaultThumbImage withBadgeImage:DefaultBadgeImage WithCardNumber:DefaultCardNumber withCardNumberLocation:[NSLocation right] withCardNmame:badgeName WithCardNameLocation:[NSLocation left]]];
-        }
+       // NSArray *badgesNames=@[@"李宁",@"嘉和一品",@"老驴头",@"海底捞", @"乔丹",@"乙醇",@"麻辣香锅",@"老北京炸酱面",@"城隍庙小吃",@"樊家",@"庆丰包子1"];
+         NSArray *randomColors=@[[UIColor blueColor],[UIColor greenColor],[UIColor yellowColor],[UIColor magentaColor],[UIColor orangeColor],[UIColor purpleColor]];
+           for(NSString *badgeName in badgesNames){
+             UIColor *color=randomColors[arc4random()%randomColors.count];
+               [Badge initWithName:badgeName WithbackgroundColor:color withBadgeThumbImage:DefaultThumbImage withBadgeImage:DefaultBadgeImage WithCardNumber:DefaultCardNumber withCardNumberLocation:[NSLocation right] withCardNmame:badgeName WithCardNameLocation:[NSLocation left] withContext:self.context];
+       }
     }
     
     NSLog(@"initRandomBadge finished");
@@ -80,15 +103,15 @@ static BadgeInfos *sharedSingleton;
     
 }
 
--(BadgeInfo *) getRadomBadge{
+-(Badge *) getRadomBadge{
     if([self badgesCount]==0) return nil;
     int randomCount=arc4random()%self.badges.count;
-    BadgeInfo *badge= self.badges[randomCount];
+    Badge *badge= self.badges[randomCount];
     [self.badges removeObjectAtIndex:randomCount];
     return badge;
 }
 
--(BadgeInfo *) badgeAtIndex:(NSInteger) index{
+-(Badge *) badgeAtIndex:(NSInteger) index{
     if(index<[self badgesCount]){
         return self.badges[index];
     }

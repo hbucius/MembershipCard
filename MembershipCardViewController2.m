@@ -9,7 +9,6 @@
 #import "MembershipCardViewController2.h"
 #import "Cell.h"
 #import "OneCardViewController.h"
-#import "BadgeInfo.h"
 #import "BadgeInfos.h"
 #import "Constants.h"
 @interface MembershipCardViewController2 ()
@@ -76,7 +75,7 @@ NSString *kDetailViewControllerID=@"OneCardView";
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     Cell *cell =[collectionView dequeueReusableCellWithReuseIdentifier:kCellId forIndexPath:indexPath];
     NSLog(@"cellForItemAtIndexPath :index=%ld",(long)self.index);
-    BadgeInfo *badge=[self.badgeInfos badgeAtIndex:(indexPath.row+self.index*badgesCountInOnePage)];
+    Badge *badge=[self.badgeInfos badgeAtIndex:(indexPath.row+self.index*badgesCountInOnePage)];
     if(badge!=nil){
         cell.CellLabel.text=badge.badgeName;
         [cell.CellImage setBackgroundImage:[UIImage imageNamed:badge.badgeThumbImage] forState:UIControlStateNormal];

@@ -7,18 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BadgeInfo.h"
+#import "Badge+Info.h"
 @interface BadgeInfos : NSObject
 
 @property(strong ,nonatomic) NSMutableArray *badges;
-
--(void ) addBadge:(BadgeInfo *) badge ;
--(void)  deleteBadgeWithName:(NSString *) label;
--(BadgeInfo *) getRadomBadge;
+@property(weak,nonatomic) NSManagedObjectContext *context;
+-(void ) addBadge:(Badge *) badge;
+-(void)  deleteBadgeWithName:(NSString *) name;
+-(Badge *) getRadomBadge;
 -(NSInteger) badgesCount;
--(BadgeInfo *) badgeAtIndex:(NSInteger) index;
-
-
+-(Badge *) badgeAtIndex:(NSInteger) index;
+ 
 +(BadgeInfos *) shareInstance;
 
 @end

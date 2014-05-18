@@ -16,5 +16,6 @@ extern NSString * const DefaultThumbImage;
 extern NSString * const DefaultBadgeImage;
 extern NSString * const DefaultCardName;
 extern NSString * const DefaultCardNumber;
-extern SEL selector;
+extern BOOL  const DebugIng;
+
 @end

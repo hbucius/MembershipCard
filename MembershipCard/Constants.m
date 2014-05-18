@@ -15,6 +15,7 @@ NSString * const DefaultThumbImage=@"0000.JPG";
 NSString * const DefaultBadgeImage=@"2.JPG";
 NSString * const DefaultCardName=@"Nike";
 NSString * const DefaultCardNumber=@"62220201220";
+BOOL  const DebugIng=YES;
 
 
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSLocation : NSObject
+@interface NSLocation : NSObject <NSCoding>
 
 +(NSLocation *) right;
 +(NSLocation *) left;

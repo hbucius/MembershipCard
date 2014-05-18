@@ -90,13 +90,23 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],
                                                                       NSFontAttributeName:[UIFont boldSystemFontOfSize:20],
                                                                      }];
-    UIBarButtonItem  *rightBarButtonItem1=[[UIBarButtonItem alloc] initWithTitle:@"+"
-                                                                            style:UIBarButtonItemStyleBordered
-                                                                           target:nil
-                                                                           action:nil];
-    [rightBarButtonItem1 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:26.0],       NSForegroundColorAttributeName:[UIColor darkGrayColor ],
+  
+    UIBarButtonItem  *rightBarButtonItem1=[[UIBarButtonItem alloc] initWithTitle:@""
+                                                                         style:UIBarButtonItemStyleBordered
+                                                                           target:self
+                                                                         action:@selector(rightTopButtonSettings)];
+    [rightBarButtonItem1 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:26.0],NSForegroundColorAttributeName:[UIColor darkGrayColor],  NSBackgroundColorAttributeName:[UIColor clearColor]} forState:UIControlStateNormal];
+    
+    [rightBarButtonItem1 setBackgroundImage:[UIImage imageNamed:@"0.JPG"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    UIBarButtonItem  *rightBarButtonItem2=[[UIBarButtonItem alloc] initWithTitle:@"+"
+                                                                           style:UIBarButtonItemStyleBordered
+                                                                          target:self
+                                                                          action:@selector(rightTopButtonAdd)];
+    [rightBarButtonItem2 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:30.0], NSForegroundColorAttributeName:[UIColor darkGrayColor ],
                                                   NSBackgroundColorAttributeName:[UIColor clearColor]} forState:UIControlStateNormal];
-    self.navigationItem.rightBarButtonItem=rightBarButtonItem1;
+    
+    
+   [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:rightBarButtonItem1,rightBarButtonItem2, nil]];
 
     
 
@@ -106,6 +116,24 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void) rightTopButtonSettings{
+    if (DebugIng) {
+        NSLog(@"rightTopButtonSettings is clicked");
+    }
+    UIViewController *settings=[self.storyboard instantiateViewControllerWithIdentifier:@"settings"];
+    [self.navigationController pushViewController:settings animated:YES];
+}
+
+-(void) rightTopButtonAdd{
+    if (DebugIng) {
+        NSLog(@"rightTopButtonAdd is clicked");
+    }
+    
+    UIViewController *addCard=[self.storyboard instantiateViewControllerWithIdentifier:@"addCard"];
+    [self.navigationController pushViewController:addCard animated:YES];
+
+    
 }
 
 

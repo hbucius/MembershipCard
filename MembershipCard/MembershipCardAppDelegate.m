@@ -8,13 +8,14 @@
 
 #import "MembershipCardAppDelegate.h"
 #import "MyPageViewController.h"
+#import "DataController.h"
 
 @implementation MembershipCardAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-       
+    [DataController shareInstance];
     return YES;
 }
 							
@@ -42,6 +43,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 

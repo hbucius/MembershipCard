@@ -8,32 +8,56 @@
         <scene sceneID="qH5-NF-q7C">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="lzU-ms-Oc0" customClass="MyPageViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="会员卡" id="4GP-C0-X65" colorLabel="IBBuiltInLabel-Green"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="membercardTitle" destination="4GP-C0-X65" id="WVd-vX-lIW"/>
+                        <segue destination="4zH-df-63h" kind="push" identifier="settings" id="2yW-iS-RYt"/>
+                        <segue destination="94b-Fd-oGy" kind="push" identifier="addCard" id="i0A-gN-apa"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhi-5K-4r4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1748" y="355"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Ezy-q2-YCn">
+        <!--View Controller - 设置-->
+        <scene sceneID="2Pf-kY-luI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8nB-ow-Ibf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="myH-UI-QdX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settings" id="4zH-df-63h" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ikC-lp-ffo"/>
-                        <viewControllerLayoutGuide type="bottom" id="rgH-Jz-YGZ"/>
+                        <viewControllerLayoutGuide type="top" id="Twu-YX-sJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="FXw-hw-vU3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6gd-mi-CYj">
+                    <view key="view" contentMode="scaleToFill" id="XDH-FA-jyk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="设置" id="26L-he-OTM"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKD-HG-2KA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2103" y="363"/>
+            <point key="canvasLocation" x="2208" y="355"/>
+        </scene>
+        <!--View Controller - 添加会员卡-->
+        <scene sceneID="ZXX-6D-u72">
+            <objects>
+                <viewController storyboardIdentifier="addCard" id="94b-Fd-oGy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QPc-ya-24s"/>
+                        <viewControllerLayoutGuide type="bottom" id="FIf-TB-0Xf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="46B-BU-8Eg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="添加会员卡" id="RnZ-Dj-kWU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DN3-pq-xPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2219" y="1231"/>
         </scene>
         <!--Membership Card View Controller2-->
         <scene sceneID="KrO-CC-HLY">
