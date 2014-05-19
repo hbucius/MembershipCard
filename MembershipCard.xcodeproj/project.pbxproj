@@ -96,6 +96,7 @@
 		02BE72741927020E00A14D36 /* Badge+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE72731927020E00A14D36 /* Badge+Info.m */; };
 		02BE7277192707AC00A14D36 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE7276192707AC00A14D36 /* Badge.m */; };
 		02BE727A192732D400A14D36 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE7279192732D400A14D36 /* DataController.m */; };
+		02BE7280192A8D8000A14D36 /* sed.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE727F192A8D8000A14D36 /* sed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +214,7 @@
 		02BE7276192707AC00A14D36 /* Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badge.m; sourceTree = "<group>"; };
 		02BE7278192732D400A14D36 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		02BE7279192732D400A14D36 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		02BE727F192A8D8000A14D36 /* sed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sed.png; path = ../../../../../Downloads/sed.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 		021E41BE190EDF0900091B26 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				02BE727E192A8D6500A14D36 /* icon */,
 				021E4200190EDF6900091B26 /* thumb */,
 				021E41BF190EDF6300091B26 /* full */,
 			);
@@ -454,6 +457,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		02BE727E192A8D6500A14D36 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				02BE727F192A8D8000A14D36 /* sed.png */,
+			);
+			name = icon;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -597,6 +608,7 @@
 				021E4226190EDF6900091B26 /* 13.JPG in Resources */,
 				021E41F7190EDF6300091B26 /* 30_full.JPG in Resources */,
 				021E41E0190EDF6300091B26 /* 0_full.JPG in Resources */,
+				02BE7280192A8D8000A14D36 /* sed.png in Resources */,
 				021E4238190EDF6900091B26 /* 3.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

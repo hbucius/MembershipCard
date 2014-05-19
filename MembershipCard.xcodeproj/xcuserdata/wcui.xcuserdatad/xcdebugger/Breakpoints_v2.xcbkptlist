@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "422135879.839501"
+            timestampString = "422219673.759547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "-memberCardViewCotrollerAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -184,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "422135879.839501"
+            timestampString = "422219673.759547"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "-memberCardViewCotrollerAtIndex:"
             landmarkType = "5">
          </BreakpointContent>

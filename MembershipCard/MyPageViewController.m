@@ -97,7 +97,8 @@
                                                                          action:@selector(rightTopButtonSettings)];
     [rightBarButtonItem1 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:26.0],NSForegroundColorAttributeName:[UIColor darkGrayColor],  NSBackgroundColorAttributeName:[UIColor clearColor]} forState:UIControlStateNormal];
     
-    [rightBarButtonItem1 setBackgroundImage:[UIImage imageNamed:@"0.JPG"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    UIImage *image=[UIImage imageNamed:@"sed.png"];
+    [rightBarButtonItem1 setBackgroundImage:[self imageWithImage:image convertToSize:CGSizeMake(10, 10.0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     UIBarButtonItem  *rightBarButtonItem2=[[UIBarButtonItem alloc] initWithTitle:@"+"
                                                                            style:UIBarButtonItemStyleBordered
                                                                           target:self
@@ -110,6 +111,14 @@
 
     
 
+}
+
+- (UIImage *)imageWithImage:(UIImage *)image convertToSize:(CGSize)size {
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *destImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return destImage;
 }
 
 - (void)didReceiveMemoryWarning
