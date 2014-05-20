@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cardName;
 @property (weak, nonatomic) IBOutlet UILabel *cardNumber;
 @property (weak, nonatomic) IBOutlet UIImageView *cardBackgroundImage;
+@property (weak, nonatomic) IBOutlet UIView *BottomView;
+@property (weak, nonatomic) IBOutlet UITableView *cardContents;
 
 @end

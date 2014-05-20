@@ -28,7 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view bringSubviewToFront:self.CardView];
     self.CardView.backgroundColor=[UIColor yellowColor];
+    self.BottomView.backgroundColor=[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
+    self.cardContents.backgroundColor=[UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
+
     [self initWithIndex:self.index];
     
     
