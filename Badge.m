@@ -2,7 +2,7 @@
 //  Badge.m
 //  MembershipCard
 //
-//  Created by mstr on 5/17/14.
+//  Created by mstr on 5/22/14.
 //  Copyright (c) 2014 com.hbu.com. All rights reserved.
 //
 
@@ -21,5 +21,6 @@
 @dynamic cardNumber;
 @dynamic cardNumberColor;
 @dynamic cardNumberlocation;
+@dynamic cardContent;
 
 @end

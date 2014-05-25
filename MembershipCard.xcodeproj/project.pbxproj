@@ -78,6 +78,8 @@
 		023978C219149067007548F3 /* BadgeInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 023978C119149067007548F3 /* BadgeInfos.m */; };
 		02491722191DE5E700A24283 /* cardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02491721191DE5E700A24283 /* cardView.m */; };
 		02491725191DEAD800A24283 /* NSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 02491724191DEAD800A24283 /* NSLocation.m */; };
+		02504E69192D3189006D6EC8 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 02504E68192D3189006D6EC8 /* Badge.m */; };
+		02504E6C192D31CE006D6EC8 /* CardContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 02504E6B192D31CE006D6EC8 /* CardContent.m */; };
 		02ADE003190D8B3E00FC617F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE002190D8B3E00FC617F /* Foundation.framework */; };
 		02ADE005190D8B3E00FC617F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE004190D8B3E00FC617F /* CoreGraphics.framework */; };
 		02ADE007190D8B3E00FC617F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ADE006190D8B3E00FC617F /* UIKit.framework */; };
@@ -94,7 +96,6 @@
 		02ADE039190D94E800FC617F /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ADE038190D94E800FC617F /* Cell.m */; };
 		02BE726B1923F84B00A14D36 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02BE72691923F84B00A14D36 /* Model.xcdatamodeld */; };
 		02BE72741927020E00A14D36 /* Badge+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE72731927020E00A14D36 /* Badge+Info.m */; };
-		02BE7277192707AC00A14D36 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE7276192707AC00A14D36 /* Badge.m */; };
 		02BE727A192732D400A14D36 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE7279192732D400A14D36 /* DataController.m */; };
 		02BE7280192A8D8000A14D36 /* sed.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE727F192A8D8000A14D36 /* sed.png */; };
 /* End PBXBuildFile section */
@@ -188,6 +189,10 @@
 		02491721191DE5E700A24283 /* cardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardView.m; sourceTree = "<group>"; };
 		02491723191DEAD800A24283 /* NSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLocation.h; sourceTree = "<group>"; };
 		02491724191DEAD800A24283 /* NSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLocation.m; sourceTree = "<group>"; };
+		02504E67192D3189006D6EC8 /* Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badge.h; sourceTree = "<group>"; };
+		02504E68192D3189006D6EC8 /* Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badge.m; sourceTree = "<group>"; };
+		02504E6A192D31CE006D6EC8 /* CardContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardContent.h; sourceTree = "<group>"; };
+		02504E6B192D31CE006D6EC8 /* CardContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardContent.m; sourceTree = "<group>"; };
 		02ADDFFF190D8B3E00FC617F /* MembershipCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MembershipCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02ADE002190D8B3E00FC617F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		02ADE004190D8B3E00FC617F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -210,8 +215,6 @@
 		02BE726A1923F84B00A14D36 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		02BE72721927020E00A14D36 /* Badge+Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Badge+Info.h"; sourceTree = "<group>"; };
 		02BE72731927020E00A14D36 /* Badge+Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Badge+Info.m"; sourceTree = "<group>"; };
-		02BE7275192707AC00A14D36 /* Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badge.h; sourceTree = "<group>"; };
-		02BE7276192707AC00A14D36 /* Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badge.m; sourceTree = "<group>"; };
 		02BE7278192732D400A14D36 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		02BE7279192732D400A14D36 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
 		02BE727F192A8D8000A14D36 /* sed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sed.png; path = ../../../../../Downloads/sed.png; sourceTree = "<group>"; };
@@ -335,13 +338,15 @@
 			children = (
 				02BE7278192732D400A14D36 /* DataController.h */,
 				02BE7279192732D400A14D36 /* DataController.m */,
-				02BE7275192707AC00A14D36 /* Badge.h */,
-				02BE7276192707AC00A14D36 /* Badge.m */,
 				02BE72691923F84B00A14D36 /* Model.xcdatamodeld */,
+				02504E67192D3189006D6EC8 /* Badge.h */,
+				02504E68192D3189006D6EC8 /* Badge.m */,
 				02BE72721927020E00A14D36 /* Badge+Info.h */,
 				02BE72731927020E00A14D36 /* Badge+Info.m */,
 				023978C019149067007548F3 /* BadgeInfos.h */,
 				023978C119149067007548F3 /* BadgeInfos.m */,
+				02504E6A192D31CE006D6EC8 /* CardContent.h */,
+				02504E6B192D31CE006D6EC8 /* CardContent.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -631,15 +636,16 @@
 				02ADE013190D8B3E00FC617F /* MembershipCardAppDelegate.m in Sources */,
 				02ADE039190D94E800FC617F /* Cell.m in Sources */,
 				023978C219149067007548F3 /* BadgeInfos.m in Sources */,
+				02504E69192D3189006D6EC8 /* Badge.m in Sources */,
 				02ADE00F190D8B3E00FC617F /* main.m in Sources */,
 				023978B31911A8CF007548F3 /* MyPageViewController.m in Sources */,
 				02491725191DEAD800A24283 /* NSLocation.m in Sources */,
-				02BE7277192707AC00A14D36 /* Badge.m in Sources */,
 				02BE727A192732D400A14D36 /* DataController.m in Sources */,
 				021AB8581918176100635CBE /* MembershipCardViewController2.m in Sources */,
 				02BE72741927020E00A14D36 /* Badge+Info.m in Sources */,
 				023978BC19120E83007548F3 /* Constants.m in Sources */,
 				02491722191DE5E700A24283 /* cardView.m in Sources */,
+				02504E6C192D31CE006D6EC8 /* CardContent.m in Sources */,
 				021E41BC190EDAFA00091B26 /* OneCardViewController.m in Sources */,
 				02BE726B1923F84B00A14D36 /* Model.xcdatamodeld in Sources */,
 			);

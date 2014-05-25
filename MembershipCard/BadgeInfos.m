@@ -93,8 +93,8 @@ static BadgeInfos *sharedSingleton;
        // NSArray *badgesNames=@[@"李宁",@"嘉和一品",@"老驴头",@"海底捞", @"乔丹",@"乙醇",@"麻辣香锅",@"老北京炸酱面",@"城隍庙小吃",@"樊家",@"庆丰包子1"];
          NSArray *randomColors=@[[UIColor blueColor],[UIColor greenColor],[UIColor yellowColor],[UIColor magentaColor],[UIColor orangeColor],[UIColor purpleColor]];
            for(NSString *badgeName in badgesNames){
-             UIColor *color=randomColors[arc4random()%randomColors.count];
-               [Badge initWithName:badgeName WithbackgroundColor:color withBadgeThumbImage:DefaultThumbImage withBadgeImage:DefaultBadgeImage WithCardNumber:DefaultCardNumber withCardNumberLocation:[NSLocation right] withCardNmame:badgeName WithCardNameLocation:[NSLocation left] withContext:self.context];
+             UIColor *color=randomColors[arc4random()%randomColors.count];      
+               [Badge initWithName:badgeName WithbackgroundColor:color withBadgeThumbImage:DefaultThumbImage withBadgeImage:DefaultBadgeImage WithCardNumber:DefaultCardNumber withCardNumberLocation:[NSLocation right] withCardNmame:badgeName WithCardNameLocation:[NSLocation left] withCardContent:nil withContext:self.context];
        }
     }
     

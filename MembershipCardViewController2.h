@@ -10,4 +10,6 @@
 
 @interface MembershipCardViewController2 : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property(nonatomic) NSInteger index;
+- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index;
+
 @end

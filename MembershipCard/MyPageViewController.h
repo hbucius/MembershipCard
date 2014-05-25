@@ -10,6 +10,8 @@
 
 
 @interface MyPageViewController : UIPageViewController <UIPageViewControllerDataSource>
-@property (nonatomic) NSInteger maxIndex;
+ @property (nonatomic) NSInteger maxIndex;
 @property (nonatomic) NSInteger indexOnScreen;
+
+
 @end

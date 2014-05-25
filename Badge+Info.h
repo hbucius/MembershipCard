@@ -8,6 +8,7 @@
 
 #import "Badge.h"
 #import "NSLocation.h"
+#import "CardContent.h"
 
 @interface Badge (Info)
 
@@ -15,5 +16,7 @@
 +(instancetype) initWithName:(NSString *)badgeName WithbackgroundColor:(UIColor *) backgroundColor withContext:(NSManagedObjectContext*) context;
 +(instancetype) initWithName:(NSString *)badgeName WithbackgroundColor:(UIColor *) backgroundColor withBadgeThumbImage:(NSString*)badgeImage withContext:(NSManagedObjectContext*) context;
 +(instancetype) initWithName:(NSString *)badgeName WithbackgroundColor:(UIColor *)backgroundColor withBadgeThumbImage:(NSString*)badgeThumbImage withBadgeImage:(NSString*)badgeImage WithCardNumber:(NSString*) cardNumber withCardNumberLocation:(NSLocation*)cardNumberLocation withCardNmame:(NSString*) cardName WithCardNameLocation:(NSLocation*) cardNameLocation withContext:(NSManagedObjectContext*) context;
+
++(instancetype) initWithName:(NSString *)badgeName WithbackgroundColor:(UIColor *)backgroundColor withBadgeThumbImage:(NSString*)badgeThumbImage withBadgeImage:(NSString*)badgeImage WithCardNumber:(NSString*) cardNumber withCardNumberLocation:(NSLocation*)cardNumberLocation withCardNmame:(NSString*) cardName WithCardNameLocation:(NSLocation*) cardNameLocation withCardContent:(CardContent*) cardContent withContext:(NSManagedObjectContext*) context;
 
 @end

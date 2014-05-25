@@ -2,7 +2,7 @@
 //  Badge.h
 //  MembershipCard
 //
-//  Created by mstr on 5/17/14.
+//  Created by mstr on 5/22/14.
 //  Copyright (c) 2014 com.hbu.com. All rights reserved.
 //
 
@@ -22,5 +22,6 @@
 @property (nonatomic, retain) NSString * cardNumber;
 @property (nonatomic, retain) id cardNumberColor;
 @property (nonatomic, retain) id cardNumberlocation;
+@property (nonatomic, retain) id cardContent;
 
 @end

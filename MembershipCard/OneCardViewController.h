@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OneCardViewController : UIViewController
+@interface OneCardViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic) UIImage *image;
 @property(nonatomic) NSInteger index; // the index in badgeInfos ,start from 0
 @property (weak, nonatomic) IBOutlet UILabel *cardName;

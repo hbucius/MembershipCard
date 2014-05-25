@@ -24,7 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-
+        self.indexOnScreen=0;
     }
     return self;
 }
@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     _indexOnScreen=0;
+    // _indexOnScreen=0;
      [self initPageNumber];
     [self initPageControl];
     MembershipCardViewController2 *MembershipCardCollectionStartingPage=[self memberCardViewCotrollerAtIndex:_indexOnScreen];
@@ -48,6 +48,7 @@
       
     }
     self.view.backgroundColor=[UIColor whiteColor];
+    [self initLeftTopItems];
     [self initTitle];
     
     
@@ -61,6 +62,17 @@
 -(void) initPageNumber{
     NSInteger badgesCount=[[BadgeInfos shareInstance]badgesCount];
     self.maxIndex=(NSInteger)((badgesCount+badgesCountInOnePage-1)/badgesCountInOnePage)-1;
+}
+-(void)initLeftTopItems{
+    
+    UIBarButtonItem  *leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@""
+                                                                         style:UIBarButtonItemStyleBordered
+                                                                        target:self
+                                                                        action:@selector(doNothing)];
+    [leftBarButtonItem  setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:16.0],NSForegroundColorAttributeName:[UIColor darkGrayColor],  NSBackgroundColorAttributeName:[UIColor clearColor]} forState:UIControlStateNormal];
+    
+    [self.navigationItem setLeftBarButtonItem:leftBarButtonItem];
+
 }
 
 -(void) initPageControl{
@@ -111,6 +123,10 @@
 
     
 
+}
+
+-(void) doNothing{
+    NSLog(@"I do nothing");
 }
 
 - (UIImage *)imageWithImage:(UIImage *)image convertToSize:(CGSize)size {
