@@ -98,6 +98,8 @@
 		02BE72741927020E00A14D36 /* Badge+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE72731927020E00A14D36 /* Badge+Info.m */; };
 		02BE727A192732D400A14D36 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE7279192732D400A14D36 /* DataController.m */; };
 		02BE7280192A8D8000A14D36 /* sed.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE727F192A8D8000A14D36 /* sed.png */; };
+		02CBFD1E1933D0CE00426891 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CBFD1D1933D0CE00426891 /* StartPageViewController.m */; };
+		02CBFD211933D40A00426891 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CBFD201933D40A00426891 /* CustomSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +220,10 @@
 		02BE7278192732D400A14D36 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		02BE7279192732D400A14D36 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
 		02BE727F192A8D8000A14D36 /* sed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sed.png; path = ../../../../../Downloads/sed.png; sourceTree = "<group>"; };
+		02CBFD1C1933D0CE00426891 /* StartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPageViewController.h; sourceTree = "<group>"; };
+		02CBFD1D1933D0CE00426891 /* StartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPageViewController.m; sourceTree = "<group>"; };
+		02CBFD1F1933D40A00426891 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
+		02CBFD201933D40A00426891 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +374,10 @@
 			isa = PBXGroup;
 			children = (
 				02ADE014190D8B3E00FC617F /* Main.storyboard */,
+				02CBFD1F1933D40A00426891 /* CustomSegue.h */,
+				02CBFD201933D40A00426891 /* CustomSegue.m */,
+				02CBFD1C1933D0CE00426891 /* StartPageViewController.h */,
+				02CBFD1D1933D0CE00426891 /* StartPageViewController.m */,
 				02ADE037190D94E800FC617F /* Cell.h */,
 				02ADE038190D94E800FC617F /* Cell.m */,
 				02491720191DE5E700A24283 /* cardView.h */,
@@ -643,10 +653,12 @@
 				02BE727A192732D400A14D36 /* DataController.m in Sources */,
 				021AB8581918176100635CBE /* MembershipCardViewController2.m in Sources */,
 				02BE72741927020E00A14D36 /* Badge+Info.m in Sources */,
+				02CBFD211933D40A00426891 /* CustomSegue.m in Sources */,
 				023978BC19120E83007548F3 /* Constants.m in Sources */,
 				02491722191DE5E700A24283 /* cardView.m in Sources */,
 				02504E6C192D31CE006D6EC8 /* CardContent.m in Sources */,
 				021E41BC190EDAFA00091B26 /* OneCardViewController.m in Sources */,
+				02CBFD1E1933D0CE00426891 /* StartPageViewController.m in Sources */,
 				02BE726B1923F84B00A14D36 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

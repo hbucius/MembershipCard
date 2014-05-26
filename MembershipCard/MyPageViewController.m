@@ -103,19 +103,20 @@
                                                                       NSFontAttributeName:[UIFont boldSystemFontOfSize:20],
                                                                      }];
   
-    UIBarButtonItem  *rightBarButtonItem1=[[UIBarButtonItem alloc] initWithTitle:@""
+    UIBarButtonItem  *rightBarButtonItem1=[[UIBarButtonItem alloc] initWithTitle:@"≣"
                                                                          style:UIBarButtonItemStyleBordered
                                                                            target:self
                                                                          action:@selector(rightTopButtonSettings)];
-    [rightBarButtonItem1 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:26.0],NSForegroundColorAttributeName:[UIColor darkGrayColor],  NSBackgroundColorAttributeName:[UIColor clearColor]} forState:UIControlStateNormal];
-    
+    [rightBarButtonItem1 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:20.0],NSForegroundColorAttributeName:[UIColor darkGrayColor],  NSBackgroundColorAttributeName:[UIColor clearColor]} forState:UIControlStateNormal];
     UIImage *image=[UIImage imageNamed:@"sed.png"];
-    [rightBarButtonItem1 setBackgroundImage:[self imageWithImage:image convertToSize:CGSizeMake(10, 10.0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+ //   [rightBarButtonItem1 setBackgroundImage:[self imageWithImage:image convertToSize:CGSizeMake(15.0, 5.0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+   //[rightBarButtonItem1 setImage:[self imageWithImage:image convertToSize:CGSizeMake(15.0, 25.0)]];
+    
     UIBarButtonItem  *rightBarButtonItem2=[[UIBarButtonItem alloc] initWithTitle:@"+"
                                                                            style:UIBarButtonItemStyleBordered
                                                                           target:self
                                                                           action:@selector(rightTopButtonAdd)];
-    [rightBarButtonItem2 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:30.0], NSForegroundColorAttributeName:[UIColor darkGrayColor ],
+    [rightBarButtonItem2 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:26.0], NSForegroundColorAttributeName:[UIColor darkGrayColor ],
                                                   NSBackgroundColorAttributeName:[UIColor clearColor]} forState:UIControlStateNormal];
     
     

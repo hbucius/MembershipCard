@@ -184,7 +184,7 @@
     MyPageViewController *mcvc2=[sb instantiateViewControllerWithIdentifier:@"MyPageViewController"];
     mcvc2.indexOnScreen=self.index/badgesCountInOnePage;
      CATransition* transition = [CATransition animation];
-    transition.duration = 1.00;
+    transition.duration = 0.5;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     transition.type = kCATransitionMoveIn; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
     transition.subtype = kCATransitionFromLeft; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
