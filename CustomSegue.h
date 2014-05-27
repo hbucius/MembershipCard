@@ -10,4 +10,5 @@
 
 @interface CustomSegue : UIStoryboardSegue
 
+@property (nonatomic,strong) NSString *direction;
 @end

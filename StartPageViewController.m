@@ -7,7 +7,7 @@
 //
 
 #import "StartPageViewController.h"
-
+#import "CustomSegue.h"
 @interface StartPageViewController ()
 
 @end
@@ -51,5 +51,25 @@
 }
 
 - (IBAction)login:(UIButton *)sender forEvent:(UIEvent *)event {
+}
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"segueToAddCardAtStartPage"] ) {
+        if([segue isKindOfClass:[CustomSegue class]]){
+            CustomSegue *cSegue=(CustomSegue *) segue ;
+            cSegue.direction=@"RIGHTTOLEFT";
+        }
+        
+    }
+    else if([segue.identifier isEqualToString:@"segueToLoginPage"] ) {
+        if([segue isKindOfClass:[CustomSegue class]]){
+            CustomSegue *cSegue=(CustomSegue *) segue ;
+            cSegue.direction=@"RIGHTTOLEFT";
+        }
+        
+    }
+
+    
 }
 @end

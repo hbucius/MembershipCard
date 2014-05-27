@@ -100,6 +100,8 @@
 		02BE7280192A8D8000A14D36 /* sed.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE727F192A8D8000A14D36 /* sed.png */; };
 		02CBFD1E1933D0CE00426891 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CBFD1D1933D0CE00426891 /* StartPageViewController.m */; };
 		02CBFD211933D40A00426891 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CBFD201933D40A00426891 /* CustomSegue.m */; };
+		02D7641A1935170400B08298 /* UITableViewControllerAddCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D764191935170400B08298 /* UITableViewControllerAddCardTableViewController.m */; };
+		02D7641D193522BD00B08298 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D7641C193522BD00B08298 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +226,10 @@
 		02CBFD1D1933D0CE00426891 /* StartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPageViewController.m; sourceTree = "<group>"; };
 		02CBFD1F1933D40A00426891 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
 		02CBFD201933D40A00426891 /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
+		02D764181935170400B08298 /* UITableViewControllerAddCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewControllerAddCardTableViewController.h; sourceTree = "<group>"; };
+		02D764191935170400B08298 /* UITableViewControllerAddCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewControllerAddCardTableViewController.m; sourceTree = "<group>"; };
+		02D7641B193522BD00B08298 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		02D7641C193522BD00B08298 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +366,12 @@
 		0249171E191DE2B500A24283 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02D7641B193522BD00B08298 /* LoginViewController.h */,
+				02D7641C193522BD00B08298 /* LoginViewController.m */,
+				02CBFD1C1933D0CE00426891 /* StartPageViewController.h */,
+				02CBFD1D1933D0CE00426891 /* StartPageViewController.m */,
+				02D764181935170400B08298 /* UITableViewControllerAddCardTableViewController.h */,
+				02D764191935170400B08298 /* UITableViewControllerAddCardTableViewController.m */,
 				023978B11911A8CF007548F3 /* MyPageViewController.h */,
 				023978B21911A8CF007548F3 /* MyPageViewController.m */,
 				021E41BA190EDAFA00091B26 /* OneCardViewController.h */,
@@ -376,8 +388,6 @@
 				02ADE014190D8B3E00FC617F /* Main.storyboard */,
 				02CBFD1F1933D40A00426891 /* CustomSegue.h */,
 				02CBFD201933D40A00426891 /* CustomSegue.m */,
-				02CBFD1C1933D0CE00426891 /* StartPageViewController.h */,
-				02CBFD1D1933D0CE00426891 /* StartPageViewController.m */,
 				02ADE037190D94E800FC617F /* Cell.h */,
 				02ADE038190D94E800FC617F /* Cell.m */,
 				02491720191DE5E700A24283 /* cardView.h */,
@@ -658,8 +668,10 @@
 				02491722191DE5E700A24283 /* cardView.m in Sources */,
 				02504E6C192D31CE006D6EC8 /* CardContent.m in Sources */,
 				021E41BC190EDAFA00091B26 /* OneCardViewController.m in Sources */,
+				02D7641D193522BD00B08298 /* LoginViewController.m in Sources */,
 				02CBFD1E1933D0CE00426891 /* StartPageViewController.m in Sources */,
 				02BE726B1923F84B00A14D36 /* Model.xcdatamodeld in Sources */,
+				02D7641A1935170400B08298 /* UITableViewControllerAddCardTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -108,7 +108,6 @@
                                                                            target:self
                                                                          action:@selector(rightTopButtonSettings)];
     [rightBarButtonItem1 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:20.0],NSForegroundColorAttributeName:[UIColor darkGrayColor],  NSBackgroundColorAttributeName:[UIColor clearColor]} forState:UIControlStateNormal];
-    UIImage *image=[UIImage imageNamed:@"sed.png"];
  //   [rightBarButtonItem1 setBackgroundImage:[self imageWithImage:image convertToSize:CGSizeMake(15.0, 5.0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
    //[rightBarButtonItem1 setImage:[self imageWithImage:image convertToSize:CGSizeMake(15.0, 25.0)]];
     

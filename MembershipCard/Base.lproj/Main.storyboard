@@ -19,7 +19,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fhi-5K-4r4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2274" y="355"/>
+            <point key="canvasLocation" x="2442" y="-37"/>
         </scene>
         <!--Table View Controller - 添加会员卡-->
         <scene sceneID="SyU-WZ-Bfu">
@@ -116,7 +116,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ImU-Tv-udd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2775" y="1223"/>
+            <point key="canvasLocation" x="3827" y="1223"/>
         </scene>
         <!--Table View Controller - 设置-->
         <scene sceneID="c9b-vC-9WF">
@@ -492,6 +492,69 @@
             </objects>
             <point key="canvasLocation" x="3351" y="407"/>
         </scene>
+        <!--Login View Controller - 登录-->
+        <scene sceneID="L5H-y0-ZWT">
+            <objects>
+                <viewController id="3rB-iM-Dgz" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g4R-Fm-3FE"/>
+                        <viewControllerLayoutGuide type="bottom" id="waI-a1-jWA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TJR-B3-1sV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-BX-li8">
+                                <rect key="frame" x="68" y="93" width="232" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="94g-cj-jAS">
+                                <rect key="frame" x="68" y="133" width="232" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpu-En-uhc">
+                                <rect key="frame" x="31" y="181" width="259" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.88373278529999999" blue="0.65679796189999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="邮箱" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRY-cL-owN">
+                                <rect key="frame" x="20" y="96" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbY-88-eed">
+                                <rect key="frame" x="20" y="142" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="登录" id="l1U-0p-ulE">
+                        <barButtonItem key="leftBarButtonItem" title="❮" id="aZA-wN-Twr">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Rcv-9e-ULo" kind="custom" identifier="segueBackToStartPageFromLoginPage" customClass="CustomSegue" id="bZc-5b-6sY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZi-J0-fg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="1157"/>
+        </scene>
         <!--Start Page View Controller-->
         <scene sceneID="1V5-g6-qRm">
             <objects>
@@ -515,7 +578,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addCard:forEvent:" destination="Rcv-9e-ULo" eventType="touchUpInside" id="qGT-sJ-egx"/>
-                                    <segue destination="wNz-dn-jPU" kind="custom" customClass="CustomSegue" id="eEJ-MB-pK2"/>
+                                    <segue destination="wNz-dn-jPU" kind="custom" identifier="segueToAddCardAtStartPage" customClass="CustomSegue" id="eEJ-MB-pK2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5t-Dz-BuP">
@@ -529,6 +592,7 @@
                                 </state>
                                 <connections>
                                     <action selector="login:forEvent:" destination="Rcv-9e-ULo" eventType="touchUpInside" id="783-jo-qF2"/>
+                                    <segue destination="jym-oL-Tnx" kind="custom" identifier="segueToLoginPage" customClass="CustomSegue" id="iNi-gH-AgO"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="8_full.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="gCN-vv-wG0">
@@ -542,7 +606,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzG-9A-fV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480" y="396"/>
+            <point key="canvasLocation" x="1374" y="429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0fi-Hl-FvT">
@@ -560,12 +624,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4p-bf-Tua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881" y="393"/>
+            <point key="canvasLocation" x="1829" y="-135"/>
         </scene>
-        <!--Table View Controller - 添加会员卡-->
+        <!--Table View Controller Add Card Table View Controller - 添加会员卡-->
         <scene sceneID="C9R-Be-1GP">
             <objects>
-                <tableViewController storyboardIdentifier="addCardOnStartPage" id="giZ-bA-tsz" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="addCardOnStartPage" id="giZ-bA-tsz" customClass="UITableViewControllerAddCardTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="O94-PA-Ocq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -648,16 +712,20 @@
                                 </cells>
                             </tableViewSection>
                         </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="giZ-bA-tsz" id="ZTx-Ge-uLF"/>
-                            <outlet property="delegate" destination="giZ-bA-tsz" id="I3E-CJ-rFg"/>
-                        </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="添加会员卡" id="k9J-hz-1Vx"/>
+                    <navigationItem key="navigationItem" title="添加会员卡" id="k9J-hz-1Vx">
+                        <barButtonItem key="leftBarButtonItem" title="❮" id="2ve-KX-cwT">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="goBack:" destination="giZ-bA-tsz" id="SgI-hJ-Fo2"/>
+                                <segue destination="Rcv-9e-ULo" kind="custom" identifier="segueBackToStartPage" customClass="CustomSegue" id="c24-NT-uX3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6YV-th-SSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1901" y="1130"/>
+            <point key="canvasLocation" x="2228" y="1185"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6KK-hP-JUb">
@@ -676,7 +744,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQz-eo-ibn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="1130"/>
+            <point key="canvasLocation" x="1720" y="1147"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wmb-n8-xCF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jym-oL-Tnx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MDF-55-TkL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3rB-iM-Dgz" kind="relationship" relationship="rootViewController" id="r4j-1X-kxd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P3b-hU-iDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="1062"/>
         </scene>
     </scenes>
     <resources>
@@ -688,4 +774,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="bZc-5b-6sY"/>
+    </inferredMetricsTieBreakers>
 </document>
