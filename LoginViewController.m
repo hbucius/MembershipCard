@@ -10,6 +10,8 @@
 #import "CustomSegue.h"
 @interface LoginViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *emailText;
+
 @end
 
 @implementation LoginViewController
@@ -27,8 +29,34 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+ 
+    
+    self.emailText.textColor=[UIColor lightGrayColor];
+    self.emailText.text=@"请输入邮箱 ";
+     //email
+    
+    CGRect frame1=CGRectMake(13,77,287,46);
+    UIView *view1=[[UIView alloc]initWithFrame:frame1];
+    view1.backgroundColor=[UIColor clearColor];
+    [self.view addSubview:view1];
+    view1.layer.borderColor=[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0].CGColor;
+    view1.layer.borderWidth=1.0f;
+  
+    CGRect frame2=CGRectMake(13,125,287,42);
+    UIView *view2=[[UIView alloc]initWithFrame:frame2];
+    view2.backgroundColor=[UIColor clearColor];
+    [self.view addSubview:view2];
+    
+   
+    view2.layer.borderColor=[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0].CGColor;
+    view2.layer.borderWidth=1.0f;
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+  
+    
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -45,6 +73,12 @@
     }
     
 }
+- (IBAction)editEmail:(UITextField *)sender {
+    sender.text=@" ";
+    sender.textColor=[UIColor blackColor];
+ }
+
+
 
 /*
 #pragma mark - Navigation
