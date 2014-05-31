@@ -27,6 +27,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[UIColor blackColor] setStroke];
+    [[UIColor blackColor] setFill];
+    
+ 
+    
 }
 
 - (void)didReceiveMemoryWarning

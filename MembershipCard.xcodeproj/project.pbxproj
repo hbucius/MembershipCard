@@ -73,6 +73,9 @@
 		021E423E190EDF6900091B26 /* 7.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 021E421E190EDF6900091B26 /* 7.JPG */; };
 		021E423F190EDF6900091B26 /* 8.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 021E421F190EDF6900091B26 /* 8.JPG */; };
 		021E4240190EDF6900091B26 /* 9.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 021E4220190EDF6900091B26 /* 9.JPG */; };
+		021F272F193971D20015AEC2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021F272E193971D20015AEC2 /* QuartzCore.framework */; };
+		021F273519399B960015AEC2 /* settingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F273419399B960015AEC2 /* settingTableViewController.m */; };
+		021F273819399DFC0015AEC2 /* UnsupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F273719399DFC0015AEC2 /* UnsupportViewController.m */; };
 		023978B31911A8CF007548F3 /* MyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023978B21911A8CF007548F3 /* MyPageViewController.m */; };
 		023978BC19120E83007548F3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 023978B519120260007548F3 /* Constants.m */; };
 		023978C219149067007548F3 /* BadgeInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 023978C119149067007548F3 /* BadgeInfos.m */; };
@@ -183,6 +186,11 @@
 		021E421E190EDF6900091B26 /* 7.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.JPG; sourceTree = "<group>"; };
 		021E421F190EDF6900091B26 /* 8.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.JPG; sourceTree = "<group>"; };
 		021E4220190EDF6900091B26 /* 9.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.JPG; sourceTree = "<group>"; };
+		021F272E193971D20015AEC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		021F273319399B960015AEC2 /* settingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingTableViewController.h; sourceTree = "<group>"; };
+		021F273419399B960015AEC2 /* settingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingTableViewController.m; sourceTree = "<group>"; };
+		021F273619399DFC0015AEC2 /* UnsupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsupportViewController.h; sourceTree = "<group>"; };
+		021F273719399DFC0015AEC2 /* UnsupportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnsupportViewController.m; sourceTree = "<group>"; };
 		023978B11911A8CF007548F3 /* MyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPageViewController.h; path = MembershipCard/MyPageViewController.h; sourceTree = "<group>"; };
 		023978B21911A8CF007548F3 /* MyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyPageViewController.m; path = MembershipCard/MyPageViewController.m; sourceTree = "<group>"; };
 		023978B419120260007548F3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = MembershipCard/Constants.h; sourceTree = "<group>"; };
@@ -237,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021F272F193971D20015AEC2 /* QuartzCore.framework in Frameworks */,
 				02ADE005190D8B3E00FC617F /* CoreGraphics.framework in Frameworks */,
 				02ADE007190D8B3E00FC617F /* UIKit.framework in Frameworks */,
 				02ADE003190D8B3E00FC617F /* Foundation.framework in Frameworks */,
@@ -366,6 +375,8 @@
 		0249171E191DE2B500A24283 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				021F273319399B960015AEC2 /* settingTableViewController.h */,
+				021F273419399B960015AEC2 /* settingTableViewController.m */,
 				02D7641B193522BD00B08298 /* LoginViewController.h */,
 				02D7641C193522BD00B08298 /* LoginViewController.m */,
 				02CBFD1C1933D0CE00426891 /* StartPageViewController.h */,
@@ -378,6 +389,8 @@
 				021E41BB190EDAFA00091B26 /* OneCardViewController.m */,
 				021AB8561918176100635CBE /* MembershipCardViewController2.h */,
 				021AB8571918176100635CBE /* MembershipCardViewController2.m */,
+				021F273619399DFC0015AEC2 /* UnsupportViewController.h */,
+				021F273719399DFC0015AEC2 /* UnsupportViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -434,6 +447,7 @@
 		02ADE001190D8B3E00FC617F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				021F272E193971D20015AEC2 /* QuartzCore.framework */,
 				02ADE002190D8B3E00FC617F /* Foundation.framework */,
 				02ADE004190D8B3E00FC617F /* CoreGraphics.framework */,
 				02ADE006190D8B3E00FC617F /* UIKit.framework */,
@@ -669,9 +683,11 @@
 				02504E6C192D31CE006D6EC8 /* CardContent.m in Sources */,
 				021E41BC190EDAFA00091B26 /* OneCardViewController.m in Sources */,
 				02D7641D193522BD00B08298 /* LoginViewController.m in Sources */,
+				021F273519399B960015AEC2 /* settingTableViewController.m in Sources */,
 				02CBFD1E1933D0CE00426891 /* StartPageViewController.m in Sources */,
 				02BE726B1923F84B00A14D36 /* Model.xcdatamodeld in Sources */,
 				02D7641A1935170400B08298 /* UITableViewControllerAddCardTableViewController.m in Sources */,
+				021F273819399DFC0015AEC2 /* UnsupportViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

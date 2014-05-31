@@ -25,6 +25,7 @@
     [btnLayer setMasksToBounds:YES];
     [btnLayer setCornerRadius:10.0f];
     [self.CellImage setBackgroundColor:[UIColor redColor]];
+    
 }
 
 @end

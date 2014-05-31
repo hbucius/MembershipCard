@@ -16,6 +16,9 @@ extern NSString * const DefaultThumbImage;
 extern NSString * const DefaultBadgeImage;
 extern NSString * const DefaultCardName;
 extern NSString * const DefaultCardNumber;
+extern NSString * const DefaultEmailText;
+extern NSString * const DefaultPasswordText;
+
 extern BOOL  const DebugIng;
 
 @end
