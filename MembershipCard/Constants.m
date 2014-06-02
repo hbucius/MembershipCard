@@ -18,7 +18,7 @@ NSString * const DefaultCardNumber=@"62220201220";
 NSString * const DefaultEmailText=@"邮箱地址/手机号";
 NSString * const DefaultPasswordText=@"请填写密码";
 
-BOOL  const DebugIng=YES;
+BOOL  const DebugIng=YES;;;;
 
 
 @end
