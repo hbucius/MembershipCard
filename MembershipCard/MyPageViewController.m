@@ -14,7 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *membercardTitle;
 @property (weak,nonatomic) UIPageControl * pageControl;
+
 @end
+
+static MyPageViewController *_shareInstance=nil ;
 
 @implementation MyPageViewController
 
@@ -52,9 +55,15 @@
     [self initTitle];
     
     
-  
     
 }
+
+
++(MyPageViewController*) shareInstance{
+    
+    
+}
+
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 }

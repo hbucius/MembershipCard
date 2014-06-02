@@ -242,9 +242,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Bbv-fs-vPg" kind="push" id="Y3N-VK-ZNx"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ob7-T1-vol" style="IBUITableViewCellStyleDefault" id="6BS-bw-58F">
                                         <rect key="frame" x="0.0" y="315" width="320" height="44"/>
@@ -263,7 +260,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="8Lb-1q-eqt" kind="push" id="tTi-FM-CdY"/>
+                                            <segue destination="Bbv-fs-vPg" kind="push" id="Dtn-Fd-ogc"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -295,7 +292,7 @@
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k2S-az-5dT">
                                 <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LjT-ca-8qC">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LjT-ca-8qC" customClass="LXReorderableCollectionViewFlowLayout">
                                     <size key="itemSize" width="80" height="84"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -339,7 +336,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="CellImage" destination="zyL-Lx-SVd" id="Dls-Xf-6z9"/>
                                             <outlet property="CellLabel" destination="zPg-Ry-HhI" id="MYE-tx-MbZ"/>
