@@ -8,7 +8,8 @@
 #import "LXReorderableCollectionViewFlowLayout.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
-
+#import "ShareDriver.h"
+#import "MembershipCardViewController2.h"
 #define LX_FRAMES_PER_SECOND 60.0
 
 #ifndef CGGEOMETRY_LXSUPPORT_H_
@@ -418,7 +419,18 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             //add scroll actions,only support horizontal direction
             if (viewCenter.x> (CGRectGetMaxX(self.collectionView.bounds) - self.scrollingTriggerEdgeInsets.right)) {
                 NSLog(@" horizontal is happened, go to other pages");
-               self.collectionView.superview=[UIColor blackColor];
+                MyPageViewController *pageviewController=[ShareDriver shareInstances].myPageViewcontroller;
+                if([pageviewController.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]]){
+                    NSInteger index=((MembershipCardViewController2*)pageviewController.viewControllers[0]).index ;
+                    NSLog(@"indexOnScreen is %d",index);
+                    MembershipCardViewController2 *mscvc=[pageviewController memberCardViewCotrollerAtIndex:index+1];
+                    NSLog(@"index is %d",mscvc.index);
+                    [pageviewController setViewControllers:[NSArray arrayWithObject:mscvc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
+                        NSLog(@"navigate to other pages");
+                    }];
+                }
+             
+          
                 
             }
             

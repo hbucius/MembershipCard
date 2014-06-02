@@ -10,6 +10,7 @@
 #import "MembershipCardViewController2.h"
 #import "Constants.h"
 #import "BadgeInfos.h"
+#import "ShareDriver.h"
 @interface MyPageViewController ()
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *membercardTitle;
@@ -17,8 +18,7 @@
 
 @end
 
-static MyPageViewController *_shareInstance=nil ;
-
+ 
 @implementation MyPageViewController
 
 #pragma mark lifecycle
@@ -53,16 +53,11 @@ static MyPageViewController *_shareInstance=nil ;
     self.view.backgroundColor=[UIColor whiteColor];
     [self initLeftTopItems];
     [self initTitle];
-    
-    
-    
+    [ShareDriver shareInstances].myPageViewcontroller=self;
 }
 
 
-+(MyPageViewController*) shareInstance{
-    
-    
-}
+
 
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -195,7 +190,7 @@ static MyPageViewController *_shareInstance=nil ;
     UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     MembershipCardViewController2* MembershipCardCollectionPage = [sb instantiateViewControllerWithIdentifier:@"MembershipCardViewController2"];
    if(MembershipCardCollectionPage)
-   {;
+   {
        NSLog(@"MembershipCardCollectionPage is not nil");
       _indexOnScreen=index;
        NSLog(@"_indexOnScreen become %ld",(long)_indexOnScreen);

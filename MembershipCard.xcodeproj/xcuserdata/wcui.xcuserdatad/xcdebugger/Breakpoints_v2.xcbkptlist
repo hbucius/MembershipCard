@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "422909589.336303"
+            timestampString = "423429954.734023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "-memberCardViewCotrollerAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -184,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "422909589.336303"
+            timestampString = "423429954.734023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "-memberCardViewCotrollerAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -200,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "421270320.191893"
+            timestampString = "423429954.734023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -726,11 +726,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.m"
-            timestampString = "423381272.381912"
+            timestampString = "423429954.734023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "-handleScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -742,11 +742,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.m"
-            timestampString = "423381272.381912"
+            timestampString = "423429954.734023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "-handleScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -758,11 +758,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.m"
-            timestampString = "423381272.381912"
+            timestampString = "423429954.734023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
             landmarkName = "-handleScroll:"
             landmarkType = "5">
          </BreakpointContent>
@@ -774,11 +774,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.m"
-            timestampString = "423381272.381912"
+            timestampString = "423429954.734023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "-handleLongPressGesture:"
             landmarkType = "5">
          </BreakpointContent>
@@ -790,11 +790,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.m"
-            timestampString = "423381272.381912"
+            timestampString = "423429954.734023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "301"
+            endingLineNumber = "301"
             landmarkName = "-handleLongPressGesture:"
             landmarkType = "5">
          </BreakpointContent>
@@ -806,23 +806,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.m"
-            timestampString = "423381272.381912"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "386"
-            endingLineNumber = "386"
-            landmarkName = "-handlePanGesture:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.m"
-            timestampString = "423381272.381912"
+            timestampString = "423429954.734023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "387"
@@ -834,15 +818,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.m"
-            timestampString = "423382625.761993"
+            timestampString = "423429954.734023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "422"
-            endingLineNumber = "422"
+            startingLineNumber = "388"
+            endingLineNumber = "388"
+            landmarkName = "-handlePanGesture:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.m"
+            timestampString = "423431690.787146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "434"
+            endingLineNumber = "434"
             landmarkName = "-handlePanGesture:"
             landmarkType = "5">
          </BreakpointContent>

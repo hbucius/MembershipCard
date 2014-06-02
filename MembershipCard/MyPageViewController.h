@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MembershipCardViewController2.h"
 
 @interface MyPageViewController : UIPageViewController <UIPageViewControllerDataSource>
  @property (nonatomic) NSInteger maxIndex;
 @property (nonatomic) NSInteger indexOnScreen;
-+(MyPageViewController*) shareInstance;
+- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index;
 
 @end

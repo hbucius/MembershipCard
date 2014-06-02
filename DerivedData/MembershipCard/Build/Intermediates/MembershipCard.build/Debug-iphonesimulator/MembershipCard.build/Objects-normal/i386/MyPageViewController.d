@@ -8,4 +8,5 @@ dependencies: \
   /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/BadgeInfos.h \
   /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/Badge+Info.h \
   /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/Badge.h \
-  /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/CardContent.h
+  /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/CardContent.h \
+  /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/ShareDriver.h
