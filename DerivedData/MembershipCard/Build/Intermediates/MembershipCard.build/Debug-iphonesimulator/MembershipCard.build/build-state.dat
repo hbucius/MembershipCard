@@ -440,7 +440,7 @@ t1401504619
 s39652
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.o
-t1401504618
+t1401674138
 s3596
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/settingTableViewController.o
@@ -460,7 +460,7 @@ t1401504618
 s123148
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app
-t1401516399
+t1401674138
 s2550
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM
@@ -724,7 +724,7 @@ t1401504631
 s195417
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/Base.lproj/Main.storyboardc
-t1401516439
+t1401674140
 s952
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/Info.plist
@@ -732,7 +732,7 @@ t1401504633
 s1036
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard
-t1401513698
+t1401674138
 s167932
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/Model.momd
@@ -777,8 +777,8 @@ t1400897973
 s3736
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard
-c00000000538971960000000000017E72
-t1401516438
+c00000000538971BF0000000000017E72
+t1401516479
 s97906
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Cell.h
@@ -852,9 +852,9 @@ t1398625214
 s45
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/main.m
-c00000000535D53BE000000000000016D
-t1398625214
-s365
+c00000000538BD99A000000000000016E
+t1401674138
+s366
 
 N/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCardViewController2.h
 c0000000053824A7200000000000001C8
@@ -1456,7 +1456,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies5e0e4716a939b941^abcc4c16a939b941^---0#1#1#--18"Check dependencies36"D8D1B4F4-F517-4A10-A082-87BBE7C115F8-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciese773be1a113cb941^0d72bf1a113cb941^---0#1#1#--18"Check dependencies36"0292084C-CE5B-4C8E-A5A4-C398A668ECF9-
 
 CCompileAssetCatalog /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Images.xcassets
 s423197431.627975
@@ -1820,8 +1820,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Compile
 b174C2099-0662-4193-AB0C-1015E372EA39
 
 CCompileC DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.o /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s423197418.904876
-e423197418.959733
+s423366938.745809
+e423366938.776803
 r1
 xCompileC
 xDerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.o
@@ -1832,8 +1832,8 @@ xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/main.m
 d/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/MembershipCardAppDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/main.m236"CompileC DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.o MembershipCard/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilere6cfe7ea7a39b941^eab1f5ea7a39b941^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/main.m0000000000000000^4323"CompileC DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.o MembershipCard/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/MembershipCard-generated-files.hmap -I/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/MembershipCard-own-target-headers.hmap -I/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/MembershipCard-all-target-headers.hmap -iquote /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/MembershipCard-project-headers.hmap -I/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/DerivedSources/i386 -I/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/DerivedSources -F/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator -include /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/PrecompiledHeaders/MembershipCard-Prefix-gqqeyrnvokftwvbvvtbmapuvmtmu/MembershipCard-Prefix.pch -MMD -MT dependencies -MF /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.dia -c /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/main.m -o /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.o36"78F9504C-E3EE-4AD2-A5B7-38780A13A810-
-b174C2099-0662-4193-AB0C-1015E372EA39
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/main.m236"CompileC DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.o MembershipCard/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler180bbf1a113cb941^55f6c91a113cb941^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/main.m0000000000000000^4323"CompileC DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.o MembershipCard/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/MembershipCard-generated-files.hmap -I/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/MembershipCard-own-target-headers.hmap -I/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/MembershipCard-all-target-headers.hmap -iquote /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/MembershipCard-project-headers.hmap -I/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/DerivedSources/i386 -I/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/DerivedSources -F/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator -include /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/PrecompiledHeaders/MembershipCard-Prefix-gqqeyrnvokftwvbvvtbmapuvmtmu/MembershipCard-Prefix.pch -MMD -MT dependencies -MF /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.dia -c /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/main.m -o /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/main.o36"30E5B5DA-24C7-40CB-8333-01DEAE2353ED-
+bD7367B21-0351-43E1-87E1-0FE38E8C6E5B
 
 CCompileC DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/settingTableViewController.o /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/settingTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s423206490.346171
@@ -1852,16 +1852,16 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile
 b33DCDCA8-0868-4C0A-A02F-57833F37C7ED
 
 CCompileStoryboard /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard
-s423209238.289157
-e423209239.293497
+s423366938.820151
+e423366941.027805
 r1
 xCompileStoryboard
 x/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard
 o/* com.apple.ibtool.document.warnings */
 o/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard:KQo-cP-kwi: warning: Segues initiated directly from view controllers must have an identifier for use with -[UIViewController performSegueWithIdentifier:sender:] [9]
 o/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard:Z3X-U5-FFg: warning: Segues initiated directly from view controllers must have an identifier for use with -[UIViewController performSegueWithIdentifier:sender:] [9]
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"CompileStoryboard MembershipCard/Base.lproj/Main.storyboard59"CompileStoryboard MembershipCard/Base.lproj/Main.storyboard40164a16a939b941^9a234b17a939b941^-547"/* com.apple.ibtool.document.warnings *//Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard:KQo-cP-kwi: warning: Segues initiated directly from view controllers must have an identifier for use with -[UIViewController performSegueWithIdentifier:sender:]/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard:Z3X-U5-FFg: warning: Segues initiated directly from view controllers must have an identifier for use with -[UIViewController performSegueWithIdentifier:sender:]2(21%IDEActivityLogMessage2@139"Segues initiated directly from view controllers must have an identifier for use with -[UIViewController performSegueWithIdentifier:sender:]-423209239#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@98"file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--2@139"Segues initiated directly from view controllers must have an identifier for use with -[UIViewController performSegueWithIdentifier:sender:]-423209239#18446744073709551615#0#-1#-3@98"file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--0#0#1#-19%DVTDocumentLocation4@98"file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard0000000000000000^920"CompileStoryboard MembershipCard/Base.lproj/Main.storyboard    cd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/Base.lproj/Main.storyboardc /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard36"00471166-BE20-4D56-A586-B46BE4897017-
-b932EB724-D86A-4D0D-A06B-A8C49C70055D
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"CompileStoryboard MembershipCard/Base.lproj/Main.storyboard59"CompileStoryboard MembershipCard/Base.lproj/Main.storyboard3a04d21a113cb941^361f071d113cb941^-547"/* com.apple.ibtool.document.warnings *//Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard:KQo-cP-kwi: warning: Segues initiated directly from view controllers must have an identifier for use with -[UIViewController performSegueWithIdentifier:sender:]/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard:Z3X-U5-FFg: warning: Segues initiated directly from view controllers must have an identifier for use with -[UIViewController performSegueWithIdentifier:sender:]2(21%IDEActivityLogMessage2@139"Segues initiated directly from view controllers must have an identifier for use with -[UIViewController performSegueWithIdentifier:sender:]-423366940#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@98"file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--2@139"Segues initiated directly from view controllers must have an identifier for use with -[UIViewController performSegueWithIdentifier:sender:]-423366940#18446744073709551615#0#-1#-3@98"file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--0#0#1#-19%DVTDocumentLocation4@98"file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard0000000000000000^920"CompileStoryboard MembershipCard/Base.lproj/Main.storyboard    cd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/Base.lproj/Main.storyboardc /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Base.lproj/Main.storyboard36"8687000E-9908-4C0B-B114-9D1385974D8D-
+bD7367B21-0351-43E1-87E1-0FE38E8C6E5B
 
 CCopyStringsFile /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/en.lproj/InfoPlist.strings MembershipCard/en.lproj/InfoPlist.strings
 s423197431.618348
@@ -2534,18 +2534,18 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"DataMo
 b174C2099-0662-4193-AB0C-1015E372EA39
 
 CGenerateDSYMFile /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard
-s423206500.223532
-e423206500.257342
+s423366941.028468
+e423366941.058842
 r1
 xGenerateDSYMFile
 x/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM
 x/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection146"Generate /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM202"GenerateDSYMFile DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard6f4639649e39b941^58e241649e39b941^---0#0#1#-19%DVTDocumentLocation2@145"file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM/0000000000000000^844"GenerateDSYMFile DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard    cd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard -o /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM36"3FCE3E64-C7C3-4F52-8BD1-8A71AAC965B3-
-b0E335FDD-5C43-4D98-9511-76CCD84133AF
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection146"Generate /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM202"GenerateDSYMFile DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCardc956071d113cb941^ed100f1d113cb941^---0#0#1#-19%DVTDocumentLocation2@145"file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM/0000000000000000^844"GenerateDSYMFile DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard    cd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard -o /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app.dSYM36"FC95FAB5-E00B-4E7E-B546-24A40A565DB8-
+bD7367B21-0351-43E1-87E1-0FE38E8C6E5B
 
 CLd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard normal i386
-s423206498.884378
-e423206498.920221
+s423366938.778675
+e423366938.813661
 r1
 xLd
 x/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard
@@ -2588,6 +2588,7 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/D
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreData.framework/CoreData
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
@@ -2610,7 +2611,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/D
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
 d/usr/lib/libSystem.B.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
 d/usr/lib/system/libcache.dylib
 d/usr/lib/system/libcommonCrypto.dylib
@@ -2637,8 +2637,8 @@ d/usr/lib/system/libsystem_pthread.dylib
 d/usr/lib/system/libsystem_sandbox.dylib
 d/usr/lib/system/libunc.dylib
 d/usr/lib/system/libunwind.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Link /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard112"Ld DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard normal i3863e77e2629e39b941^fda2ec629e39b941^---0#0#1#--1709"Ld DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard normal i386    cd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator -F/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator -filelist /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/MembershipCard.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -framework QuartzCore -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/MembershipCard_dependency_info.dat -o /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard36"4BC664F2-67E1-424B-BB90-CC69C441B906-
-b0E335FDD-5C43-4D98-9511-76CCD84133AF
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Link /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard112"Ld DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard normal i386f567c71a113cb941^014dd01a113cb941^---0#0#1#--1709"Ld DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard normal i386    cd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator -F/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator -filelist /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/MembershipCard.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -framework QuartzCore -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Intermediates/MembershipCard.build/Debug-iphonesimulator/MembershipCard.build/Objects-normal/i386/MembershipCard_dependency_info.dat -o /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/MembershipCard36"3A716DB1-A2F6-4D25-84A9-F12565FAE2D9-
+bD7367B21-0351-43E1-87E1-0FE38E8C6E5B
 
 CProcessInfoPlistFile /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app/Info.plist /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/MembershipCard-Info.plist
 s423197433.548605
@@ -2669,11 +2669,11 @@ CProcessPCH /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/Member
 r0
 
 CTouch /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app
-s423209239.295516
-e423209239.299687
+s423366941.060487
+e423366941.064374
 r1
 xTouch
 x/Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"Touch /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app88"Touch DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app35b24b17a939b941^2cbb4c17a939b941^---0#0#1#--496"Touch DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app    cd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app36"5A3C5EB9-2F81-4C2A-A10C-2079D0615760-
-b932EB724-D86A-4D0D-A06B-A8C49C70055D
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"Touch /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app88"Touch DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app59870f1d113cb941^ee7b101d113cb941^---0#0#1#--496"Touch DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app    cd /Users/wcui/Desktop/WorkSpaces/own/MembershipCard    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/DerivedData/MembershipCard/Build/Products/Debug-iphonesimulator/MembershipCard.app36"B187AC2D-8FE3-4475-8952-E25DFF366DF6-
+bD7367B21-0351-43E1-87E1-0FE38E8C6E5B
 
