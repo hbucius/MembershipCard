@@ -13,6 +13,10 @@
 @property (assign, nonatomic) UIEdgeInsets scrollingTriggerEdgeInsets;
 @property (strong, nonatomic, readonly) UILongPressGestureRecognizer *longPressGestureRecognizer;
 @property (strong, nonatomic, readonly) UIPanGestureRecognizer *panGestureRecognizer;
+@property (strong, nonatomic) UIView *currentView;
+@property (strong, nonatomic) NSIndexPath *selectedItemIndexPath;
+@property (assign, nonatomic) CGPoint currentViewCenter;
+
 
 - (void)setUpGestureRecognizersOnCollectionView __attribute__((deprecated("Calls to setUpGestureRecognizersOnCollectionView method are not longer needed as setup are done automatically through KVO.")));
 
@@ -32,6 +36,7 @@
 
 @protocol LXReorderableCollectionViewDelegateFlowLayout <UICollectionViewDelegateFlowLayout>
 @optional
+
 
 - (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout willBeginDraggingItemAtIndexPath:(NSIndexPath *)indexPath;
 - (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didBeginDraggingItemAtIndexPath:(NSIndexPath *)indexPath;

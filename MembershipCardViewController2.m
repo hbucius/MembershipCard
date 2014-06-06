@@ -12,9 +12,12 @@
 #import "BadgeInfos.h"
 #import "Constants.h"
 @interface MembershipCardViewController2 ()
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property(nonatomic,weak) BadgeInfos *badgeInfos;
-@end
+@property(nonatomic ,strong) NSIndexPath *lastIndexPath;
+@property(nonatomic,strong)  UIView *lastView;
+@property (nonatomic) CGPoint  lastPoint;
+
+ @end
 
 NSString *kCellId=@"cellID";
 NSString *kDetailViewControllerID=@"OneCardView";
@@ -38,6 +41,52 @@ NSString *kDetailViewControllerID=@"OneCardView";
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
     [[self collectionView]setBackgroundColor:[UIColor   whiteColor]];
+    
+     if(self.lastIndexPath) {
+        [self setLayout];
+    }
+     
+    
+}
+
+-(void) setLayoutCurrentView{
+    
+    if([self.layout isKindOfClass:[LXReorderableCollectionViewFlowLayout class]])
+    {
+        LXReorderableCollectionViewFlowLayout *flowLayout=(LXReorderableCollectionViewFlowLayout*)self.layout;
+        [self.currentView.layer setBackgroundColor:[UIColor blackColor].CGColor];
+        flowLayout.currentView=self.currentView;
+        [self.collectionView addSubview:self.currentView];
+        
+    }
+
+}
+
+
+
+-(void) setLastSelectedIndexpath:(NSIndexPath*) lastIndexPath lastCurrentView:(UIView *) lastView lastCurrentViewCenter:(CGPoint) lastPoint{
+     NSUInteger path[2];
+    [lastIndexPath getIndexes:path];
+    self.lastIndexPath=[NSIndexPath indexPathWithIndexes:path length:2];
+    self.lastPoint=lastPoint;
+    NSData *tempArchiveView = [NSKeyedArchiver archivedDataWithRootObject:lastView];
+    self.lastView = [NSKeyedUnarchiver unarchiveObjectWithData:tempArchiveView];
+    //self.lastView.backgroundColor=[UIColor redColor];
+ }
+
+
+
+-(void) setLayout{
+    
+    LXReorderableCollectionViewFlowLayout *selfLayout=(LXReorderableCollectionViewFlowLayout*)self.layout;
+    NSUInteger path[2];
+    [self.lastIndexPath getIndexes:path];
+    selfLayout.selectedItemIndexPath=[NSIndexPath indexPathWithIndexes:path length:2];
+    selfLayout.currentView=self.lastView;
+    selfLayout.currentViewCenter=self.lastPoint;
+    [self.collectionView addSubview:selfLayout.currentView];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,6 +134,17 @@ NSString *kDetailViewControllerID=@"OneCardView";
         cell.CellLabel.hidden=YES;
     }
     return cell;
+}
+
+
+
+#pragma mark flowlayout
+
+-(UICollectionViewLayout *) layout{
+    
+    return self.collectionView.collectionViewLayout;
+    
+    
 }
 
 #pragma mark UICollectionViewDelegateFlowLayout protocal

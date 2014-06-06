@@ -11,5 +11,9 @@
 
 @interface MembershipCardViewController2 : UIViewController<LXReorderableCollectionViewDelegateFlowLayout,LXReorderableCollectionViewDataSource>
 @property(nonatomic) NSInteger index;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property(nonatomic,strong) UIView *currentView;
+-(void) setLastSelectedIndexpath:(NSIndexPath*) lastIndexPath lastCurrentView:(UIView *) lastView lastCurrentViewCenter:(CGPoint) lastPoint;
+
 
 @end

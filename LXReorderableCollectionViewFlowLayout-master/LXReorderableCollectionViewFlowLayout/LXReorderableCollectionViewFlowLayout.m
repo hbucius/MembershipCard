@@ -64,9 +64,6 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
 @interface LXReorderableCollectionViewFlowLayout ()
 
-@property (strong, nonatomic) NSIndexPath *selectedItemIndexPath;
-@property (strong, nonatomic) UIView *currentView;
-@property (assign, nonatomic) CGPoint currentViewCenter;
 @property (assign, nonatomic) CGPoint panTranslationInCollectionView;
 @property (strong, nonatomic) CADisplayLink *displayLink;
 
@@ -113,6 +110,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         [self setDefaults];
         [self addObserver:self forKeyPath:kLXCollectionViewKeyPath options:NSKeyValueObservingOptionNew context:nil];
     }
+    NSLog(@"flow layout initeed");
     return self;
 }
 
@@ -123,6 +121,12 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         [self addObserver:self forKeyPath:kLXCollectionViewKeyPath options:NSKeyValueObservingOptionNew context:nil];
     }
     return self;
+}
+
+-(void) setCurrentView:(UIView *)currentView {
+    _currentView=currentView;
+    self.currentViewCenter=_currentView.center;
+    
 }
 
 - (void)dealloc {
@@ -290,6 +294,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             
             UICollectionViewCell *collectionViewCell = [self.collectionView cellForItemAtIndexPath:self.selectedItemIndexPath];
             
+            if(collectionViewCell==nil) NSLog(@"collectionViewcell is nil now");
+            
             self.currentView = [[UIView alloc] initWithFrame:collectionViewCell.frame];
             
             collectionViewCell.highlighted = YES;
@@ -383,6 +389,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 - (void)handlePanGesture:(UIPanGestureRecognizer *)gestureRecognizer {
     switch (gestureRecognizer.state) {
         case UIGestureRecognizerStateBegan:
+            NSLog(@"handle pan Gesture begin");
         case UIGestureRecognizerStateChanged: {
             self.panTranslationInCollectionView = [gestureRecognizer translationInView:self.collectionView];
             CGPoint viewCenter = self.currentView.center = LXS_CGPointAdd(self.currentViewCenter, self.panTranslationInCollectionView);
@@ -423,7 +430,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                 if([pageviewController.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]]){
                     NSInteger index=((MembershipCardViewController2*)pageviewController.viewControllers[0]).index ;
                     NSLog(@"indexOnScreen is %d",index);
-                    MembershipCardViewController2 *mscvc=[pageviewController memberCardViewCotrollerAtIndex:index+1];
+                    self.currentView.backgroundColor=[UIColor orangeColor];
+                    MembershipCardViewController2 *mscvc=[pageviewController memberCardViewCotrollerAtIndex:index+1 withLayout:self];
                     NSLog(@"index is %d",mscvc.index);
                     [pageviewController setViewControllers:[NSArray arrayWithObject:mscvc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
                         NSLog(@"navigate to other pages");
@@ -483,7 +491,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     if ([self.panGestureRecognizer isEqual:gestureRecognizer]) {
-        return (self.selectedItemIndexPath != nil);
+      return (self.selectedItemIndexPath != nil);
+       
     }
     return YES;
 }

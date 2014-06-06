@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "MembershipCardViewController2.h"
-
+#import "LXReorderableCollectionViewFlowLayout.h"
 @interface MyPageViewController : UIPageViewController <UIPageViewControllerDataSource>
  @property (nonatomic) NSInteger maxIndex;
 @property (nonatomic) NSInteger indexOnScreen;
-- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index;
+- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index withLayout:(LXReorderableCollectionViewFlowLayout*) layout ;
+
 
 @end

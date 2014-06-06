@@ -200,6 +200,22 @@
 
     return MembershipCardCollectionPage;
 }
+
+- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index withView:(UIView*) view{
+    
+    MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index];
+    mscvc.currentView=[[UIView alloc]initWithFrame:view.frame];
+     return  mscvc;
+}
+
+- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index withLayout:(LXReorderableCollectionViewFlowLayout*) layout {
+    MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index];
+    [mscvc setLastSelectedIndexpath:layout.selectedItemIndexPath lastCurrentView:layout.currentView lastCurrentViewCenter:layout.currentViewCenter];
+    return mscvc;
+}
+
+ 
+
 - (UIViewController *)pageViewController:(UIPageViewController *)pvc viewControllerBeforeViewController:(MembershipCardViewController2 *)vc
 {
     NSLog(@"before is called");
