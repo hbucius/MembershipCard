@@ -16,6 +16,8 @@
 @property(nonatomic ,strong) NSIndexPath *lastIndexPath;
 @property(nonatomic,strong)  UIView *lastView;
 @property (nonatomic) CGPoint  lastPoint;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+
 
  @end
 
@@ -40,76 +42,21 @@ NSString *kDetailViewControllerID=@"OneCardView";
     // Do any additional setup after loading the view.
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
+    ((UIScrollView *)self.collectionView).delegate=self;
     [[self collectionView]setBackgroundColor:[UIColor   whiteColor]];
-    
-     if(self.lastIndexPath) {
-        [self setLayout];
-    }
-     
-    
-}
-
--(void) setLayoutCurrentView{
-    
-    if([self.layout isKindOfClass:[LXReorderableCollectionViewFlowLayout class]])
-    {
-        LXReorderableCollectionViewFlowLayout *flowLayout=(LXReorderableCollectionViewFlowLayout*)self.layout;
-        [self.currentView.layer setBackgroundColor:[UIColor blackColor].CGColor];
-        flowLayout.currentView=self.currentView;
-        [self.collectionView addSubview:self.currentView];
-        
-    }
+    [self initPageControl];
+  
 
 }
 
-
-
--(void) setLastSelectedIndexpath:(NSIndexPath*) lastIndexPath lastCurrentView:(UIView *) lastView lastCurrentViewCenter:(CGPoint) lastPoint{
-     NSUInteger path[2];
-    [lastIndexPath getIndexes:path];
-    self.lastIndexPath=[NSIndexPath indexPathWithIndexes:path length:2];
-    self.lastPoint=lastPoint;
-    NSData *tempArchiveView = [NSKeyedArchiver archivedDataWithRootObject:lastView];
-    self.lastView = [NSKeyedUnarchiver unarchiveObjectWithData:tempArchiveView];
-    //add uibutton
-    UIButton *button=[[UIButton alloc]initWithFrame:self.lastView.bounds];
-    NSLog(@"last view 's bound is :%f,%f,%f,%f",self.lastView.bounds.origin.x,self.lastView.bounds.origin.y,self.lastView.bounds.size.width,self.lastView.bounds.size.height);
-    [self.lastView addSubview:button];
-    
-     [button addTarget:self action:@selector(currentViewTouchDown)  forControlEvents:UIControlEventAllEvents];
-    button.backgroundColor=[UIColor blackColor];
-    
-   //  self.lastView.backgroundColor=[UIColor clearColor];
-    
- }
-
--(void) copyViewFrom:(UIView*) view1 toView:(UIView*)view2{
-    
-    view2=[[UIView alloc]initWithFrame:view1.frame];
-    for(UIView *subView in view1.subviews){
-        [view2 addSubview:subView];
-    }
-    view2.transform=CGAffineTransformMake(view1.transform.a, view1.transform.b, view1.transform.c, view1.transform.d, view1.transform.tx, view1.transform.ty);
-    view2.backgroundColor=[UIColor clearColor];
-    
+-(void) initPageControl {
+    self.pageControl.backgroundColor=[UIColor blackColor];
+    NSInteger badgesCount=[[BadgeInfos shareInstance]badgesCount];
+    self.pageControl.numberOfPages=(badgesCount+badgesCountInOnePage-1)/badgesCountInOnePage;
+     self.pageControl.currentPage=0;
 }
 
--(void)   currentViewTouchDown{
-    NSLog(@"I am touching down");
-}
 
--(void) setLayout{
-    
-    LXReorderableCollectionViewFlowLayout *selfLayout=(LXReorderableCollectionViewFlowLayout*)self.layout;
-    NSUInteger path[2];
-    [self.lastIndexPath getIndexes:path];
-    selfLayout.selectedItemIndexPath=[NSIndexPath indexPathWithIndexes:path length:2];
-    selfLayout.currentView=self.lastView;
-    selfLayout.currentViewCenter=self.lastPoint;
-    [self.collectionView addSubview:selfLayout.currentView];
-    
-    
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -122,11 +69,11 @@ NSString *kDetailViewControllerID=@"OneCardView";
 -(void) setIndex:(NSInteger)index{
     _index=index;
     NSLog(@"index become %ld in collection",(long)_index);
+
     //set the special according the index ; need to be done here
 }
 
 -(BadgeInfos *) badgeInfos{
-//    NSLog(@"getBadgeInfos has been called");
     if(_badgeInfos==nil)
         _badgeInfos=[BadgeInfos shareInstance];
     return _badgeInfos;
@@ -136,21 +83,26 @@ NSString *kDetailViewControllerID=@"OneCardView";
 #pragma mark collectionView datasource
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+  //  return [[BadgeInfos shareInstance]badgesCount];
     return badgesCountInOnePage;
 }
 
 -(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    NSInteger badgesCount=[[BadgeInfos shareInstance]badgesCount];
+
+    return (badgesCount+badgesCountInOnePage-1)/badgesCountInOnePage;
 }
 
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     Cell *cell =[collectionView dequeueReusableCellWithReuseIdentifier:kCellId forIndexPath:indexPath];
     NSLog(@"cellForItemAtIndexPath :index=%ld",(long)self.index);
-    Badge *badge=[self.badgeInfos badgeAtIndex:(indexPath.row+self.index*badgesCountInOnePage)];
+    NSUInteger index=indexPath.row+ indexPath.section*badgesCountInOnePage;
+    Badge *badge=[self.badgeInfos badgeAtIndex:index];
     if(badge!=nil){
         cell.CellLabel.text=badge.badgeName;
         [cell.CellImage setBackgroundImage:[UIImage imageNamed:badge.badgeThumbImage] forState:UIControlStateNormal];
-    }
+        cell.CellImage.backgroundColor=[UIColor redColor];
+     }
     else {
         cell.CellImage.hidden=YES;
         cell.CellLabel.hidden=YES;
@@ -175,8 +127,13 @@ NSString *kDetailViewControllerID=@"OneCardView";
     CGRect screenBounds=[[UIScreen mainScreen]bounds];
     if(screenBounds.size.height==568) //4 inch
     {
-        return 20.0;
-    }
+        CGFloat value=10;
+    //    Cell *cell =[collectionView dequeueReusableCellWithReuseIdentifier:kCellId forIndexPath:[[NSIndexPath alloc]initWithIndex:0]];
+    //    CGFloat remainEmptySpace=(self.collectionView.frame.size.width-cell.CellImage.frame.size.width*3)/3;
+     //   value=remainEmptySpace-(cell.frame.size.width-cell.CellImage.frame.size.width);
+        return value;
+     }
+ 
     
     else{ //3.5 inch
         return 5.0;
@@ -187,11 +144,11 @@ NSString *kDetailViewControllerID=@"OneCardView";
     CGRect screenBounds=[[UIScreen mainScreen]bounds];
     if(screenBounds.size.height==568)
     {
-        return 10.0;
+        return 5.0;
     }
     
     else{
-        return 10.0;
+        return 5.0;
     }
 }
 
@@ -199,7 +156,7 @@ NSString *kDetailViewControllerID=@"OneCardView";
     CGRect screenBounds=[[UIScreen mainScreen]bounds];
     if(screenBounds.size.height==568)
     {
-        return UIEdgeInsetsMake(20, 20, 0, 20);
+        return UIEdgeInsetsMake(0, 20, 20, 15);
     }
     
     else{
@@ -263,6 +220,19 @@ NSString *kDetailViewControllerID=@"OneCardView";
   //  NSLog(@"did end drag");
 }
 
+#pragma mark UIScrollviewDelegate
+
+-(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    CGFloat pageWidth=self.collectionView.frame.size.width;
+    NSLog(@"pageWidth is %f",pageWidth);
+
+    self.pageControl.currentPage=(self.collectionView.contentOffset.x+pageWidth/2)/pageWidth;
+    NSLog(@"collectionView.contentOffset.x is %f",self.collectionView.contentOffset.x);
+
+    
+    NSLog(@"current page is %d",self.pageControl.currentPage);
+
+}
 
 
 

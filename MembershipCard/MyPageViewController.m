@@ -208,11 +208,6 @@
      return  mscvc;
 }
 
-- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index withLayout:(LXReorderableCollectionViewFlowLayout*) layout {
-    MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index];
-    [mscvc setLastSelectedIndexpath:layout.selectedItemIndexPath lastCurrentView:layout.currentView lastCurrentViewCenter:layout.currentViewCenter];
-    return mscvc;
-}
 
  
 
