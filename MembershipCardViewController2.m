@@ -71,10 +71,32 @@ NSString *kDetailViewControllerID=@"OneCardView";
     self.lastPoint=lastPoint;
     NSData *tempArchiveView = [NSKeyedArchiver archivedDataWithRootObject:lastView];
     self.lastView = [NSKeyedUnarchiver unarchiveObjectWithData:tempArchiveView];
-    //self.lastView.backgroundColor=[UIColor redColor];
+    //add uibutton
+    UIButton *button=[[UIButton alloc]initWithFrame:self.lastView.bounds];
+    NSLog(@"last view 's bound is :%f,%f,%f,%f",self.lastView.bounds.origin.x,self.lastView.bounds.origin.y,self.lastView.bounds.size.width,self.lastView.bounds.size.height);
+    [self.lastView addSubview:button];
+    
+     [button addTarget:self action:@selector(currentViewTouchDown)  forControlEvents:UIControlEventAllEvents];
+    button.backgroundColor=[UIColor blackColor];
+    
+   //  self.lastView.backgroundColor=[UIColor clearColor];
+    
  }
 
+-(void) copyViewFrom:(UIView*) view1 toView:(UIView*)view2{
+    
+    view2=[[UIView alloc]initWithFrame:view1.frame];
+    for(UIView *subView in view1.subviews){
+        [view2 addSubview:subView];
+    }
+    view2.transform=CGAffineTransformMake(view1.transform.a, view1.transform.b, view1.transform.c, view1.transform.d, view1.transform.tx, view1.transform.ty);
+    view2.backgroundColor=[UIColor clearColor];
+    
+}
 
+-(void)   currentViewTouchDown{
+    NSLog(@"I am touching down");
+}
 
 -(void) setLayout{
     
@@ -140,9 +162,9 @@ NSString *kDetailViewControllerID=@"OneCardView";
 
 #pragma mark flowlayout
 
--(UICollectionViewLayout *) layout{
+-(LXReorderableCollectionViewFlowLayout *) layout{
     
-    return self.collectionView.collectionViewLayout;
+    return (LXReorderableCollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     
     
 }
@@ -226,19 +248,19 @@ NSString *kDetailViewControllerID=@"OneCardView";
 #pragma mark - LXReorderableCollectionViewDelegateFlowLayout methods
 
 - (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout willBeginDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"will begin drag");
+ //   NSLog(@"will begin drag");
 }
 
 - (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didBeginDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"did begin drag");
+ //   NSLog(@"did begin drag");
 }
 
 - (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout willEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"will end drag");
+   // NSLog(@"will end drag");
 }
 
 - (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"did end drag");
+  //  NSLog(@"did end drag");
 }
 
 

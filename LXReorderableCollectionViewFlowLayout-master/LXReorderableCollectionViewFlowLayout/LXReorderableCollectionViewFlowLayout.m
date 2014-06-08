@@ -100,6 +100,21 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     _panGestureRecognizer.delegate = self;
     [self.collectionView addGestureRecognizer:_panGestureRecognizer];
 
+    //add target to current view, to support scroll between pages,add clearcolor button to current view
+    // so that you can monitor the touch up and touch down event
+    /**
+    if(self.currentView)  {
+        
+        UIButton *button=[[UIButton alloc]initWithFrame:self.currentView.frame];
+        button.backgroundColor=[UIColor blackColor];
+        
+        [self.currentView addSubview:button];
+        
+        NSLog(@"uibutton is added to currentview") ;
+        
+     }
+    **/
+    
     // Useful in multiple scenarios: one common scenario being when the Notification Center drawer is pulled down
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleApplicationWillResignActive:) name: UIApplicationWillResignActiveNotification object:nil];
 }
@@ -111,6 +126,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         [self addObserver:self forKeyPath:kLXCollectionViewKeyPath options:NSKeyValueObservingOptionNew context:nil];
     }
     NSLog(@"flow layout initeed");
+    
     return self;
 }
 
@@ -210,6 +226,12 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
 #pragma mark - Target/Action methods
 
+
+-(void) currentViewTouchDown {
+    
+    NSLog(@" touching down");
+}
+
 // Tight loop, allocate memory sparely, even if they are stack allocation.
 - (void)handleScroll:(CADisplayLink *)displayLink {
     LXScrollingDirection direction = (LXScrollingDirection)[displayLink.LX_userInfo[kLXScrollingDirectionKey] integerValue];
@@ -279,6 +301,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 - (void)handleLongPressGesture:(UILongPressGestureRecognizer *)gestureRecognizer {
     switch(gestureRecognizer.state) {
         case UIGestureRecognizerStateBegan: {
+            NSLog(@"Long press begin");
             NSIndexPath *currentIndexPath = [self.collectionView indexPathForItemAtPoint:[gestureRecognizer locationInView:self.collectionView]];
             
             if ([self.dataSource respondsToSelector:@selector(collectionView:canMoveItemAtIndexPath:)] &&
@@ -343,6 +366,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         } break;
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateEnded: {
+            NSLog(@"long press ended");
             NSIndexPath *currentIndexPath = self.selectedItemIndexPath;
             
             if (currentIndexPath) {
@@ -391,6 +415,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         case UIGestureRecognizerStateBegan:
             NSLog(@"handle pan Gesture begin");
         case UIGestureRecognizerStateChanged: {
+             NSLog(@"handle pan Gesture changed");
             self.panTranslationInCollectionView = [gestureRecognizer translationInView:self.collectionView];
             CGPoint viewCenter = self.currentView.center = LXS_CGPointAdd(self.currentViewCenter, self.panTranslationInCollectionView);
             
@@ -446,6 +471,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateEnded: {
             [self invalidatesScrollTimer];
+            NSLog(@"@pan gesture ended;");
         } break;
         default: {
             // Do nothing...
