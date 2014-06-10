@@ -1,7 +1,6 @@
 dependencies: \
   /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCardViewController2.m \
   /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCardViewController2.h \
-  /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.h \
   /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/Cell.h \
   /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/OneCardViewController.h \
   /Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/BadgeInfos.h \

@@ -76,7 +76,6 @@
 		021F272F193971D20015AEC2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021F272E193971D20015AEC2 /* QuartzCore.framework */; };
 		021F273519399B960015AEC2 /* settingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F273419399B960015AEC2 /* settingTableViewController.m */; };
 		021F273819399DFC0015AEC2 /* UnsupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F273719399DFC0015AEC2 /* UnsupportViewController.m */; };
-		021F273F193C1D200015AEC2 /* LXReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F273E193C1D200015AEC2 /* LXReorderableCollectionViewFlowLayout.m */; };
 		021F2754193D02920015AEC2 /* ShareDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 021F2753193D02920015AEC2 /* ShareDriver.m */; };
 		023978B31911A8CF007548F3 /* MyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023978B21911A8CF007548F3 /* MyPageViewController.m */; };
 		023978BC19120E83007548F3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 023978B519120260007548F3 /* Constants.m */; };
@@ -193,8 +192,6 @@
 		021F273419399B960015AEC2 /* settingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingTableViewController.m; sourceTree = "<group>"; };
 		021F273619399DFC0015AEC2 /* UnsupportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsupportViewController.h; sourceTree = "<group>"; };
 		021F273719399DFC0015AEC2 /* UnsupportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnsupportViewController.m; sourceTree = "<group>"; };
-		021F273D193C1D200015AEC2 /* LXReorderableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXReorderableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		021F273E193C1D200015AEC2 /* LXReorderableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXReorderableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		021F2752193D02920015AEC2 /* ShareDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareDriver.h; sourceTree = "<group>"; };
 		021F2753193D02920015AEC2 /* ShareDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareDriver.m; sourceTree = "<group>"; };
 		023978B11911A8CF007548F3 /* MyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyPageViewController.h; path = MembershipCard/MyPageViewController.h; sourceTree = "<group>"; };
@@ -360,16 +357,6 @@
 			path = thumb;
 			sourceTree = SOURCE_ROOT;
 		};
-		021F273C193C1D200015AEC2 /* LXReorderableCollectionViewFlowLayout */ = {
-			isa = PBXGroup;
-			children = (
-				021F273D193C1D200015AEC2 /* LXReorderableCollectionViewFlowLayout.h */,
-				021F273E193C1D200015AEC2 /* LXReorderableCollectionViewFlowLayout.m */,
-			);
-			name = LXReorderableCollectionViewFlowLayout;
-			path = "LXReorderableCollectionViewFlowLayout-master/LXReorderableCollectionViewFlowLayout";
-			sourceTree = "<group>";
-		};
 		023978C319149078007548F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,7 +428,6 @@
 		02ADDFF6190D8B3E00FC617F = {
 			isa = PBXGroup;
 			children = (
-				021F273C193C1D200015AEC2 /* LXReorderableCollectionViewFlowLayout */,
 				021E41BE190EDF0900091B26 /* images */,
 				02491726191DEADE00A24283 /* Utils */,
 				0249171F191DE2C900A24283 /* View */,
@@ -705,7 +691,6 @@
 				021F273519399B960015AEC2 /* settingTableViewController.m in Sources */,
 				021F2754193D02920015AEC2 /* ShareDriver.m in Sources */,
 				02CBFD1E1933D0CE00426891 /* StartPageViewController.m in Sources */,
-				021F273F193C1D200015AEC2 /* LXReorderableCollectionViewFlowLayout.m in Sources */,
 				02BE726B1923F84B00A14D36 /* Model.xcdatamodeld in Sources */,
 				02D7641A1935170400B08298 /* UITableViewControllerAddCardTableViewController.m in Sources */,
 				021F273819399DFC0015AEC2 /* UnsupportViewController.m in Sources */,

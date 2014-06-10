@@ -41,25 +41,8 @@ NSString *kDetailViewControllerID=@"OneCardView";
     [self.collectionView setDelegate:self];
     [self.collectionView setDataSource:self];
     [[self collectionView]setBackgroundColor:[UIColor   whiteColor]];
-    
-     if(self.lastIndexPath) {
-        [self setLayout];
-    }
-     
-    
-}
 
--(void) setLayoutCurrentView{
     
-    if([self.layout isKindOfClass:[LXReorderableCollectionViewFlowLayout class]])
-    {
-        LXReorderableCollectionViewFlowLayout *flowLayout=(LXReorderableCollectionViewFlowLayout*)self.layout;
-        [self.currentView.layer setBackgroundColor:[UIColor blackColor].CGColor];
-        flowLayout.currentView=self.currentView;
-        [self.collectionView addSubview:self.currentView];
-        
-    }
-
 }
 
 
@@ -98,18 +81,6 @@ NSString *kDetailViewControllerID=@"OneCardView";
     NSLog(@"I am touching down");
 }
 
--(void) setLayout{
-    
-    LXReorderableCollectionViewFlowLayout *selfLayout=(LXReorderableCollectionViewFlowLayout*)self.layout;
-    NSUInteger path[2];
-    [self.lastIndexPath getIndexes:path];
-    selfLayout.selectedItemIndexPath=[NSIndexPath indexPathWithIndexes:path length:2];
-    selfLayout.currentView=self.lastView;
-    selfLayout.currentViewCenter=self.lastPoint;
-    [self.collectionView addSubview:selfLayout.currentView];
-    
-    
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -160,14 +131,7 @@ NSString *kDetailViewControllerID=@"OneCardView";
 
 
 
-#pragma mark flowlayout
 
--(LXReorderableCollectionViewFlowLayout *) layout{
-    
-    return (LXReorderableCollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
-    
-    
-}
 
 #pragma mark UICollectionViewDelegateFlowLayout protocal
 

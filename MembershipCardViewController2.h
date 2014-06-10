@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LXReorderableCollectionViewFlowLayout.h"
 
-@interface MembershipCardViewController2 : UIViewController<LXReorderableCollectionViewDelegateFlowLayout,LXReorderableCollectionViewDataSource>
+@interface MembershipCardViewController2 : UIViewController<UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 @property(nonatomic) NSInteger index;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property(nonatomic,strong) UIView *currentView;
