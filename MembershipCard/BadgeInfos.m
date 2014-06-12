@@ -103,13 +103,7 @@ static BadgeInfos *sharedSingleton;
     
 }
 
--(Badge *) getRadomBadge{
-    if([self badgesCount]==0) return nil;
-    int randomCount=arc4random()%self.badges.count;
-    Badge *badge= self.badges[randomCount];
-    [self.badges removeObjectAtIndex:randomCount];
-    return badge;
-}
+
 
 -(Badge *) badgeAtIndex:(NSInteger) index{
     if(index<[self badgesCount]){
@@ -117,5 +111,13 @@ static BadgeInfos *sharedSingleton;
     }
     return nil;
 }
+
+-(void) deleteBadgeAtIndex:(NSUInteger) oldLocation reAddBadgeAtIndex:(NSUInteger) newLocation{
+    Badge *badge=[self.badges objectAtIndex:oldLocation];
+    [self.badges removeObjectAtIndex:oldLocation];
+    [self.badges insertObject:badge atIndex:newLocation];
+    
+}
+
 
 @end

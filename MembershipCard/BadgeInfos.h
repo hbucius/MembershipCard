@@ -14,10 +14,9 @@
 @property(weak,nonatomic) NSManagedObjectContext *context;
 -(void ) addBadge:(Badge *) badge;
 -(void)  deleteBadgeWithName:(NSString *) name;
--(Badge *) getRadomBadge;
--(NSInteger) badgesCount;
+ -(NSInteger) badgesCount;
 -(Badge *) badgeAtIndex:(NSInteger) index;
- 
+-(void) deleteBadgeAtIndex:(NSUInteger) oldLocation reAddBadgeAtIndex:(NSUInteger) newLocation;
 +(BadgeInfos *) shareInstance;
 
 @end

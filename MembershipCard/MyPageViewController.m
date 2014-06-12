@@ -110,12 +110,12 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         }
     }
     
-    [self.collectionView addGestureRecognizer:_longPressGestureRecognizer];
+    [self.view addGestureRecognizer:_longPressGestureRecognizer];
     
     _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
                                                                     action:@selector(handlePanGesture:)];
-    _panGestureRecognizer.delegate = self;
-    [self.collectionView addGestureRecognizer:_panGestureRecognizer];
+   _panGestureRecognizer.delegate = self;
+    [self.view addGestureRecognizer:_panGestureRecognizer];
     
     // Useful in multiple scenarios: one common scenario being when the Notification Center drawer is pulled down
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleApplicationWillResignActive:) name: UIApplicationWillResignActiveNotification object:nil];
@@ -125,6 +125,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self initGestureObserver];
     
 }
 
@@ -156,16 +157,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 }
 
 -(void) initTitle{
-    /**
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero] ;
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont boldSystemFontOfSize:20.0];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor darkGrayColor];
-    label.text = mainScreenTitle;
-    [label sizeToFit];
-    self.navigationItem.titleView = label;
-     **/
+ 
     [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
 
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],
@@ -177,9 +169,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                                                                            target:self
                                                                          action:@selector(rightTopButtonSettings)];
     [rightBarButtonItem1 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:20.0],NSForegroundColorAttributeName:[UIColor darkGrayColor],  NSBackgroundColorAttributeName:[UIColor clearColor]} forState:UIControlStateNormal];
- //   [rightBarButtonItem1 setBackgroundImage:[self imageWithImage:image convertToSize:CGSizeMake(15.0, 5.0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-   //[rightBarButtonItem1 setImage:[self imageWithImage:image convertToSize:CGSizeMake(15.0, 25.0)]];
-    
+   
     UIBarButtonItem  *rightBarButtonItem2=[[UIBarButtonItem alloc] initWithTitle:@"+"
                                                                            style:UIBarButtonItemStyleBordered
                                                                           target:self
@@ -187,10 +177,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     [rightBarButtonItem2 setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Palatino-Roman"  size:26.0], NSForegroundColorAttributeName:[UIColor darkGrayColor ],
                                                   NSBackgroundColorAttributeName:[UIColor clearColor]} forState:UIControlStateNormal];
     
-    
    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:rightBarButtonItem1,rightBarButtonItem2, nil]];
-
-    
 
 }
 
@@ -229,10 +216,6 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
     
 }
-
-
-
-
 
 #pragma pageView delegate
 
@@ -315,10 +298,6 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     _scrollingTriggerEdgeInsets = UIEdgeInsetsMake(50.0f, 50.0f, 50.0f, 50.0f);
 }
 
-
-
-
-
 -(void) setCurrentView:(UIView *)currentView {
     _currentView=currentView;
     self.currentViewCenter=_currentView.center;
@@ -336,10 +315,6 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     }
 }
 
-
-
-
-
 - (void)invalidateLayoutIfNecessary {
     NSIndexPath *newIndexPath = [self.collectionView indexPathForItemAtPoint:self.currentView.center];
     NSIndexPath *previousIndexPath = self.selectedItemIndexPath;
@@ -353,17 +328,19 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     [self.collectionView performBatchUpdates:^{
         __strong typeof(self) strongSelf = weakSelf;
         if (strongSelf) {
-            [strongSelf.collectionView deleteItemsAtIndexPaths:@[ previousIndexPath ]];
-            NSLog(@"deleting");
+            NSInteger index=((MembershipCardViewController2*)self.viewControllers[0]).index ;
+            NSUInteger newLocation=[newIndexPath indexAtPosition:1]+index*badgesCountInOnePage;
+            NSUInteger oldLocation=[previousIndexPath indexAtPosition:1]+index*badgesCountInOnePage;
+            [[BadgeInfos shareInstance] deleteBadgeAtIndex:oldLocation reAddBadgeAtIndex:newLocation];
+           [strongSelf.collectionView deleteItemsAtIndexPaths:@[ previousIndexPath ]];
             [strongSelf.collectionView insertItemsAtIndexPaths:@[ newIndexPath ]];
+
         }
     } completion:^(BOOL finished) {
         __strong typeof(self) strongSelf = weakSelf;
      
     }];
 }
-
-
 
 
 
@@ -491,14 +468,13 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             //add scroll actions,only support horizontal direction
             if (viewCenter.x> (CGRectGetMaxX(self.collectionView.bounds) - self.scrollingTriggerEdgeInsets.right)) {
                 NSLog(@" horizontal is happened, go to other pages");
-                MyPageViewController *pageviewController=[ShareDriver shareInstances].myPageViewcontroller;
-                if([pageviewController.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]]){
-                    NSInteger index=((MembershipCardViewController2*)pageviewController.viewControllers[0]).index ;
+                 if([self.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]]){
+                    NSInteger index=((MembershipCardViewController2*)self.viewControllers[0]).index ;
                     NSLog(@"indexOnScreen is %d",index);
                     self.currentView.backgroundColor=[UIColor orangeColor];
-                    MembershipCardViewController2 *mscvc=[pageviewController memberCardViewCotrollerAtIndex:index+1];
+                    MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index+1];
                     NSLog(@"index is %d",mscvc.index);
-                    [pageviewController setViewControllers:[NSArray arrayWithObject:mscvc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
+                    [self setViewControllers:[NSArray arrayWithObject:mscvc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
                         NSLog(@"navigate to other pages");
                     }];
                 }
@@ -562,14 +538,12 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 #pragma mark - Key-Value Observing methods
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if ([keyPath isEqualToString:kLXCollectionViewKeyPath]) {
-        if (self.collectionView != nil) {
-            if(self.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class])
-               self.collectionView=((MembershipCardViewController2 *)self.viewControllers[0]).co
-         } else {
-            
-        }
-    }
+  //  if ([keyPath isEqualToString:kLXCollectionViewKeyPath]) {
+   //     if (self.collectionView != nil) {
+  //          if([self.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]])
+ //               self.collectionView=((MembershipCardViewController2 *)self.viewControllers[0]).collectionView;
+ //        }
+ //   }
 }
 
 #pragma mark - Notifications
@@ -578,11 +552,6 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     self.panGestureRecognizer.enabled = NO;
     self.panGestureRecognizer.enabled = YES;
 }
-
-
-
-
-
 
 
 @end
