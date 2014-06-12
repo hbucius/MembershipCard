@@ -11,6 +11,7 @@
 #import "DataController.h"
 @interface BadgeInfos()
 
+@property (nonatomic,strong) NSMutableArray *shouldHidden;
 
 @end
 
@@ -40,7 +41,7 @@ static BadgeInfos *sharedSingleton;
 -(void ) addBadge:(Badge *) badge{
     if([badge isKindOfClass:[Badge class]]){
       [self.badges addObject:badge];
-    }
+     }
     
 }
 -(void)  deleteBadgeWithName:(NSString *) name{

@@ -19,4 +19,5 @@
 -(void) deleteBadgeAtIndex:(NSUInteger) oldLocation reAddBadgeAtIndex:(NSUInteger) newLocation;
 +(BadgeInfos *) shareInstance;
 
+
 @end

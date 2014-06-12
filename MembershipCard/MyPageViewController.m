@@ -337,8 +337,6 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
         }
     } completion:^(BOOL finished) {
-        __strong typeof(self) strongSelf = weakSelf;
-     
     }];
 }
 
@@ -385,6 +383,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             
             self.currentViewCenter = self.currentView.center;
             
+            [self invalidateBadgeAtSelectedIntemIndexPath];
             [UIView
              animateWithDuration:0.3
              delay:0.0
@@ -399,8 +398,10 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                      [highlightedImageView removeFromSuperview];
                  }
              }];
+            //invalidate the data in the selected item
             
             [self.collectionView.collectionViewLayout invalidateLayout];
+            
         } break;
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateEnded: {
@@ -439,6 +440,13 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             
         default: break;
     }
+}
+
+-(void)  invalidateBadgeAtSelectedIntemIndexPath{
+    NSUInteger index= ((MembershipCardViewController2 *)self.viewControllers[0]).index;
+    [BadgeInfos.shareInstance invalidateBadgeAtIndex:index*badgesCountInOnePage+[self.selectedItemIndexPath indexAtPosition:1];
+
+
 }
 
 - (void)handlePanGesture:(UIPanGestureRecognizer *)gestureRecognizer {

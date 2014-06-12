@@ -217,66 +217,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "424293041.406522"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
-            landmarkName = "-invalidateLayoutIfNecessary"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__51-[MyPageViewController invalidateLayoutIfNecessary]_block_invoke"
-                  moduleName = "MembershipCard"
-                  urlString = "file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/MyPageViewController.m"
-                  timestampString = "424208264.693883"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "362"
-                  endingLineNumber = "362"
-                  offsetFromSymbolStart = "466">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__51-[MyPageViewController invalidateLayoutIfNecessary]_block_invoke"
-                  moduleName = "MembershipCard"
-                  urlString = "file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/MyPageViewController.m"
-                  timestampString = "424208264.6941"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "362"
-                  endingLineNumber = "362"
-                  offsetFromSymbolStart = "485">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__51-[MyPageViewController invalidateLayoutIfNecessary]_block_invoke244"
-                  moduleName = "MembershipCard"
-                  urlString = "file:///Users/wcui/Desktop/WorkSpaces/own/MembershipCard/MembershipCard/MyPageViewController.m"
-                  timestampString = "424208264.694271"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "363"
-                  endingLineNumber = "363"
-                  offsetFromSymbolStart = "21">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MembershipCard/BadgeInfos.h"
             timestampString = "424210270.220113"
             startingColumnNumber = "9223372036854775807"
@@ -299,7 +239,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "539"
             endingLineNumber = "539"
-            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+            landmarkName = "-invalidateBadgeAtSelectedIntemIndexPath"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -310,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "424294829.83629"
+            timestampString = "424295921.03444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "403"
-            endingLineNumber = "403"
+            startingLineNumber = "402"
+            endingLineNumber = "402"
             landmarkName = "-handleLongPressGesture:"
             landmarkType = "5">
          </BreakpointContent>
