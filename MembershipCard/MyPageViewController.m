@@ -385,22 +385,17 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             
             self.currentViewCenter = self.currentView.center;
             
-            __weak typeof(self) weakSelf = self;
             [UIView
              animateWithDuration:0.3
              delay:0.0
              options:UIViewAnimationOptionBeginFromCurrentState
              animations:^{
-                 __strong typeof(self) strongSelf = weakSelf;
-                 if (strongSelf) {
-                     strongSelf.currentView.transform = CGAffineTransformMakeScale(1.1f, 1.1f);
+                     self.currentView.transform = CGAffineTransformMakeScale(1.1f, 1.1f);
                      highlightedImageView.alpha = 0.0f;
                      imageView.alpha = 1.0f;
-                 }
              }
              completion:^(BOOL finished) {
-                 __strong typeof(self) strongSelf = weakSelf;
-                 if (strongSelf) {
+                 if (highlightedImageView) {
                      [highlightedImageView removeFromSuperview];
                  }
              }];
