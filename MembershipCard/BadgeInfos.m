@@ -121,4 +121,10 @@ static BadgeInfos *sharedSingleton;
 }
 
 
+-(void) invalidateBadgeAtIndex:(NSUInteger) index {
+    
+    [self.badges removeObjectAtIndex:index];
+
+}
+
 @end

@@ -444,7 +444,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
 -(void)  invalidateBadgeAtSelectedIntemIndexPath{
     NSUInteger index= ((MembershipCardViewController2 *)self.viewControllers[0]).index;
-    [BadgeInfos.shareInstance invalidateBadgeAtIndex:index*badgesCountInOnePage+[self.selectedItemIndexPath indexAtPosition:1];
+    //[BadgeInfos.shareInstance invalidateBadgeAtIndex:index*badgesCountInOnePage+[self.selectedItemIndexPath indexAtPosition:1]];
+    NSLog(@"invalidate badge at index %d " ,index*badgesCountInOnePage+[self.selectedItemIndexPath indexAtPosition:1]);
 
 
 }
