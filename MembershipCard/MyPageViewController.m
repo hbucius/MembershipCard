@@ -399,7 +399,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                  }
              }];
             //invalidate the data in the selected item
-            
+            UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:self.selectedItemIndexPath];
+            cell.hidden=true;
             [self.collectionView.collectionViewLayout invalidateLayout];
             
         } break;
@@ -432,6 +433,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                      if (strongSelf) {
                          [strongSelf.currentView removeFromSuperview];
                          strongSelf.currentView = nil;
+                         
                          [strongSelf.collectionView.collectionViewLayout invalidateLayout];
                      }
                  }];
