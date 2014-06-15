@@ -380,12 +380,9 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             [self.currentView addSubview:imageView];
             [self.currentView addSubview:highlightedImageView];
             [self.collectionView addSubview:self.currentView];
-            
             self.currentViewCenter = self.currentView.center;
-            
-            [self invalidateBadgeAtSelectedIntemIndexPath];
             [UIView
-             animateWithDuration:0.3
+             animateWithDuration:0.1
              delay:0.0
              options:UIViewAnimationOptionBeginFromCurrentState
              animations:^{
@@ -418,7 +415,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                 
                 __weak typeof(self) weakSelf = self;
                 [UIView
-                 animateWithDuration:0.3
+                 animateWithDuration:0.1
                  delay:0.0
                  options:UIViewAnimationOptionBeginFromCurrentState
                  animations:^{
@@ -433,7 +430,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                      if (strongSelf) {
                          [strongSelf.currentView removeFromSuperview];
                          strongSelf.currentView = nil;
-                         
+                         UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:self.selectedItemIndexPath];
+                         cell.hidden=false;
                          [strongSelf.collectionView.collectionViewLayout invalidateLayout];
                      }
                  }];
@@ -444,13 +442,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     }
 }
 
--(void)  invalidateBadgeAtSelectedIntemIndexPath{
-    NSUInteger index= ((MembershipCardViewController2 *)self.viewControllers[0]).index;
-    //[BadgeInfos.shareInstance invalidateBadgeAtIndex:index*badgesCountInOnePage+[self.selectedItemIndexPath indexAtPosition:1]];
-    NSLog(@"invalidate badge at index %d " ,index*badgesCountInOnePage+[self.selectedItemIndexPath indexAtPosition:1]);
 
-
-}
 
 - (void)handlePanGesture:(UIPanGestureRecognizer *)gestureRecognizer {
     switch (gestureRecognizer.state) {
