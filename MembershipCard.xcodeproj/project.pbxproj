@@ -101,7 +101,6 @@
 		02BE726B1923F84B00A14D36 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02BE72691923F84B00A14D36 /* Model.xcdatamodeld */; };
 		02BE72741927020E00A14D36 /* Badge+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE72731927020E00A14D36 /* Badge+Info.m */; };
 		02BE727A192732D400A14D36 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE7279192732D400A14D36 /* DataController.m */; };
-		02BE7280192A8D8000A14D36 /* sed.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE727F192A8D8000A14D36 /* sed.png */; };
 		02CBFD1E1933D0CE00426891 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CBFD1D1933D0CE00426891 /* StartPageViewController.m */; };
 		02CBFD211933D40A00426891 /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CBFD201933D40A00426891 /* CustomSegue.m */; };
 		02D7641A1935170400B08298 /* UITableViewControllerAddCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D764191935170400B08298 /* UITableViewControllerAddCardTableViewController.m */; };
@@ -232,7 +231,6 @@
 		02BE72731927020E00A14D36 /* Badge+Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Badge+Info.m"; sourceTree = "<group>"; };
 		02BE7278192732D400A14D36 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		02BE7279192732D400A14D36 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
-		02BE727F192A8D8000A14D36 /* sed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sed.png; path = ../../../../../Downloads/sed.png; sourceTree = "<group>"; };
 		02CBFD1C1933D0CE00426891 /* StartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPageViewController.h; sourceTree = "<group>"; };
 		02CBFD1D1933D0CE00426891 /* StartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPageViewController.m; sourceTree = "<group>"; };
 		02CBFD1F1933D40A00426891 /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
@@ -271,7 +269,6 @@
 		021E41BE190EDF0900091B26 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				02BE727E192A8D6500A14D36 /* icon */,
 				021E4200190EDF6900091B26 /* thumb */,
 				021E41BF190EDF6300091B26 /* full */,
 			);
@@ -501,14 +498,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		02BE727E192A8D6500A14D36 /* icon */ = {
-			isa = PBXGroup;
-			children = (
-				02BE727F192A8D8000A14D36 /* sed.png */,
-			);
-			name = icon;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -557,6 +546,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = com.hbu.com;
 				TargetAttributes = {
+					02ADDFFE190D8B3E00FC617F = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
 					02ADE01F190D8B3E00FC617F = {
 						TestTargetID = 02ADDFFE190D8B3E00FC617F;
 					};
@@ -652,7 +648,6 @@
 				021E4226190EDF6900091B26 /* 13.JPG in Resources */,
 				021E41F7190EDF6300091B26 /* 30_full.JPG in Resources */,
 				021E41E0190EDF6300091B26 /* 0_full.JPG in Resources */,
-				02BE7280192A8D8000A14D36 /* sed.png in Resources */,
 				021E4238190EDF6900091B26 /* 3.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
