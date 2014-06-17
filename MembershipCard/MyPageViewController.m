@@ -312,6 +312,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 - (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
     if ([layoutAttributes.indexPath isEqual:self.selectedItemIndexPath]) {
         layoutAttributes.hidden = YES;
+        NSLog(@"I am hidden in applyLayoutAttributes");
     }
 }
 
@@ -322,6 +323,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     if ((newIndexPath == nil) || [newIndexPath isEqual:previousIndexPath]) {
         return;
     }
+    NSLog(@"invalidelayout happen!");
     self.selectedItemIndexPath = newIndexPath;
     
     __weak typeof(self) weakSelf = self;
@@ -332,11 +334,17 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             NSUInteger newLocation=[newIndexPath indexAtPosition:1]+index*badgesCountInOnePage;
             NSUInteger oldLocation=[previousIndexPath indexAtPosition:1]+index*badgesCountInOnePage;
             [[BadgeInfos shareInstance] deleteBadgeAtIndex:oldLocation reAddBadgeAtIndex:newLocation];
-           [strongSelf.collectionView deleteItemsAtIndexPaths:@[ previousIndexPath ]];
             [strongSelf.collectionView insertItemsAtIndexPaths:@[ newIndexPath ]];
+
+           [strongSelf.collectionView deleteItemsAtIndexPaths:@[ previousIndexPath ]];
+           
 
         }
     } completion:^(BOOL finished) {
+        UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:newIndexPath];
+        
+        cell.hidden=true;
+        NSLog(@"I am hidden in invalidateLayoutIfNecessary: indexpath:%ld",(long)newIndexPath.row);
     }];
 }
 
@@ -398,6 +406,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             //invalidate the data in the selected item
             UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:self.selectedItemIndexPath];
             cell.hidden=true;
+            NSLog(@"I am hidden in long press");
             [self.collectionView.collectionViewLayout invalidateLayout];
             
         } break;
@@ -430,9 +439,11 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                      if (strongSelf) {
                          [strongSelf.currentView removeFromSuperview];
                          strongSelf.currentView = nil;
-                         UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:self.selectedItemIndexPath];
+                         UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:currentIndexPath];
                          cell.hidden=false;
                          [strongSelf.collectionView.collectionViewLayout invalidateLayout];
+                         NSLog(@"I am not hidden any more");
+
                      }
                  }];
             }
@@ -453,7 +464,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             self.panTranslationInCollectionView = [gestureRecognizer translationInView:self.collectionView];
             CGPoint viewCenter = self.currentView.center = LXS_CGPointAdd(self.currentViewCenter, self.panTranslationInCollectionView);
             
-            [self invalidateLayoutIfNecessary];
+           // [self invalidateLayoutIfNecessary];
+            [self performSelectorOnMainThread:@selector(invalidateLayoutIfNecessary) withObject:nil waitUntilDone:YES];
             if (viewCenter.x < (CGRectGetMinX(self.collectionView.bounds) + self.scrollingTriggerEdgeInsets.left)) {
                 NSLog(@"do somthing ,horizontal");
             } else {
