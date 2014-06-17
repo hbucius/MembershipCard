@@ -317,6 +317,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 }
 
 - (void)invalidateLayoutIfNecessary {
+    NSLog(@"begin invalidateIfNecessay");
     NSIndexPath *newIndexPath = [self.collectionView indexPathForItemAtPoint:self.currentView.center];
     NSIndexPath *previousIndexPath = self.selectedItemIndexPath;
     
@@ -335,17 +336,22 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             NSUInteger oldLocation=[previousIndexPath indexAtPosition:1]+index*badgesCountInOnePage;
             [[BadgeInfos shareInstance] deleteBadgeAtIndex:oldLocation reAddBadgeAtIndex:newLocation];
             [strongSelf.collectionView insertItemsAtIndexPaths:@[ newIndexPath ]];
-
            [strongSelf.collectionView deleteItemsAtIndexPaths:@[ previousIndexPath ]];
-           
+            [self.collectionView.collectionViewLayout invalidateLayout];
 
         }
     } completion:^(BOOL finished) {
         UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:newIndexPath];
-        
-        cell.hidden=true;
-        NSLog(@"I am hidden in invalidateLayoutIfNecessary: indexpath:%ld",(long)newIndexPath.row);
-    }];
+
+        if([self.selectedItemIndexPath isEqual:newIndexPath])
+        {
+            cell.hidden=true;
+            NSLog(@"I am hidden in invalidateLayoutIfNecessary: indexpath:%ld",(long)newIndexPath.row);
+            
+        }
+     }];
+    NSLog(@"end invalidateIfNecessay");
+
 }
 
 
@@ -466,6 +472,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             
            // [self invalidateLayoutIfNecessary];
             [self performSelectorOnMainThread:@selector(invalidateLayoutIfNecessary) withObject:nil waitUntilDone:YES];
+            NSLog(@"after performselecoter");
             if (viewCenter.x < (CGRectGetMinX(self.collectionView.bounds) + self.scrollingTriggerEdgeInsets.left)) {
                 NSLog(@"do somthing ,horizontal");
             } else {

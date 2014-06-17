@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "424293041.406522"
+            timestampString = "424725613.959696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "319"
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "424293041.406522"
+            timestampString = "424728177.282887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
+            startingLineNumber = "337"
+            endingLineNumber = "337"
             landmarkName = "-invalidateLayoutIfNecessary"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "424555241.214138"
+            timestampString = "424728177.282887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "535"
-            endingLineNumber = "535"
+            startingLineNumber = "542"
+            endingLineNumber = "542"
             landmarkName = "@implementation MyPageViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -250,12 +250,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MembershipCard/MyPageViewController.m"
-            timestampString = "424554955.975523"
+            timestampString = "424728177.282887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "399"
-            endingLineNumber = "399"
+            startingLineNumber = "405"
+            endingLineNumber = "405"
             landmarkName = "-handleLongPressGesture:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MembershipCard/MyPageViewController.m"
+            timestampString = "424728177.282887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "476"
+            endingLineNumber = "476"
+            landmarkName = "-handlePanGesture:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
