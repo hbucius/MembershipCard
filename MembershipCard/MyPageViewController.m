@@ -342,8 +342,9 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         }
     } completion:^(BOOL finished) {
         UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:newIndexPath];
+        
         cell.hidden=true;
-        NSLog(@"I am hidden in invalidateLayoutIfNecessary");
+        NSLog(@"I am hidden in invalidateLayoutIfNecessary: indexpath:%ld",(long)newIndexPath.row);
     }];
 }
 
@@ -440,8 +441,9 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                          strongSelf.currentView = nil;
                          UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:currentIndexPath];
                          cell.hidden=false;
-                         NSLog(@"I am not hidden any more");
                          [strongSelf.collectionView.collectionViewLayout invalidateLayout];
+                         NSLog(@"I am not hidden any more");
+
                      }
                  }];
             }
@@ -462,7 +464,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             self.panTranslationInCollectionView = [gestureRecognizer translationInView:self.collectionView];
             CGPoint viewCenter = self.currentView.center = LXS_CGPointAdd(self.currentViewCenter, self.panTranslationInCollectionView);
             
-            [self invalidateLayoutIfNecessary];
+           // [self invalidateLayoutIfNecessary];
+            [self performSelectorOnMainThread:@selector(invalidateLayoutIfNecessary) withObject:nil waitUntilDone:YES];
             if (viewCenter.x < (CGRectGetMinX(self.collectionView.bounds) + self.scrollingTriggerEdgeInsets.left)) {
                 NSLog(@"do somthing ,horizontal");
             } else {
