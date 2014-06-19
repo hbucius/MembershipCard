@@ -16,6 +16,7 @@
 @property(nonatomic ,strong) NSIndexPath *lastIndexPath;
 @property(nonatomic,strong)  UIView *lastView;
 @property (nonatomic) CGPoint  lastPoint;
+@property (nonatomic,weak) id <MyLayout> delegate;
 
  @end
 
@@ -103,7 +104,13 @@ NSString *kDetailViewControllerID=@"OneCardView";
     return _badgeInfos;
 }
 
-
+-(void) setDelegate:(id)delegate {
+    if([delegate conformsToProtocol:@protocol(MyLayout)]) {
+        _delegate=delegate;
+    }
+    else _delegate=nil;
+    
+}
 #pragma mark collectionView datasource
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -123,10 +130,13 @@ NSString *kDetailViewControllerID=@"OneCardView";
         [cell.CellImage setBackgroundImage:[UIImage imageNamed:badge.badgeThumbImage] forState:UIControlStateNormal];
     }
     else {
-        cell.CellImage.hidden=YES;
-        cell.CellLabel.hidden=YES;
+        cell.hidden=YES;
     }
-    return cell;
+    if([self.delegate shouldHideAtIndexPath:indexPath] ) {
+        cell.hidden=YES;
+    }
+    NSLog(@"cellForItemAtIndexPath is ended ,indexpath=%d",indexPath.row);
+     return cell;
 }
 
 

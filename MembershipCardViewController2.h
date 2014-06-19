@@ -13,6 +13,16 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property(nonatomic,strong) UIView *currentView;
 -(void) setLastSelectedIndexpath:(NSIndexPath*) lastIndexPath lastCurrentView:(UIView *) lastView lastCurrentViewCenter:(CGPoint) lastPoint;
+-(void) setDelegate:(id)delegate ;
+
+@end
+
+
+@protocol MyLayout <NSObject>
+
+@required
+
+-(BOOL) shouldHideAtIndexPath:(NSIndexPath *) indexPath;
 
 
 @end

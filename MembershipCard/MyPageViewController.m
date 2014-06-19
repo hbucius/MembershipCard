@@ -216,6 +216,24 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
     
 }
+#pragma  mark MyLayout delete 
+
+
+-(BOOL) shouldHideAtIndexPath:(NSIndexPath *) indexPath{
+    BOOL value=NO;
+    if([self.selectedItemIndexPath isEqual:indexPath]) {
+        value=YES;
+        NSLog(@"self.selectedItemIndexPath isEqual:indexPath:%d",indexPath.row);
+        
+    }
+    
+    
+    
+    return value;
+    
+ }
+
+
 
 #pragma pageView delegate
 
@@ -246,6 +264,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
    }
    else NSLog(@"MembershipCardCollectionPage is  nil");
 
+    //set delegate to pageview
+    [MembershipCardCollectionPage setDelegate:self];
     return MembershipCardCollectionPage;
 }
 
@@ -370,13 +390,16 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         case UIGestureRecognizerStateBegan: {
             NSLog(@"Long press begin");
             NSIndexPath *currentIndexPath = [self.collectionView indexPathForItemAtPoint:[gestureRecognizer locationInView:self.collectionView]];
-          
-            
+            NSLog(@"currentPath is %d",currentIndexPath.row);
             self.selectedItemIndexPath = currentIndexPath;
-            
             UICollectionViewCell *collectionViewCell = [self.collectionView cellForItemAtIndexPath:self.selectedItemIndexPath];
             
-            if(collectionViewCell==nil) NSLog(@"collectionViewcell is nil now");
+            if(collectionViewCell==nil)
+            {
+                NSLog(@"collectionViewcell is nil now");
+                return;
+                
+            }
             
             self.currentView = [[UIView alloc] initWithFrame:collectionViewCell.frame];
             
@@ -412,7 +435,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             //invalidate the data in the selected item
             UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:self.selectedItemIndexPath];
             cell.hidden=true;
-            NSLog(@"I am hidden in long press");
+            NSLog(@"I am hidden in long press ,indexpath=%d" ,self.selectedItemIndexPath.row);
             [self.collectionView.collectionViewLayout invalidateLayout];
             
         } break;
@@ -447,8 +470,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                          strongSelf.currentView = nil;
                          UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:currentIndexPath];
                          cell.hidden=false;
-                         [strongSelf.collectionView.collectionViewLayout invalidateLayout];
-                         NSLog(@"I am not hidden any more");
+                        [strongSelf.collectionView.collectionViewLayout invalidateLayout];
+                         NSLog(@"I am not hidden any more indexpath=%d",currentIndexPath.row);
 
                      }
                  }];
@@ -552,16 +575,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     return NO;
 }
 
-#pragma mark - Key-Value Observing methods
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-  //  if ([keyPath isEqualToString:kLXCollectionViewKeyPath]) {
-   //     if (self.collectionView != nil) {
-  //          if([self.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]])
- //               self.collectionView=((MembershipCardViewController2 *)self.viewControllers[0]).collectionView;
- //        }
- //   }
-}
+
 
 #pragma mark - Notifications
 

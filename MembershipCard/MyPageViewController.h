@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MembershipCardViewController2.h"
-@interface MyPageViewController : UIPageViewController <UIPageViewControllerDataSource ,UIGestureRecognizerDelegate>
+@interface MyPageViewController : UIPageViewController <UIPageViewControllerDataSource ,UIGestureRecognizerDelegate,MyLayout>
  @property (nonatomic) NSInteger maxIndex;
 @property (nonatomic) NSInteger indexOnScreen;
 
