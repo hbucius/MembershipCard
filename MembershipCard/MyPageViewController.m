@@ -257,6 +257,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     MembershipCardViewController2* MembershipCardCollectionPage = [sb instantiateViewControllerWithIdentifier:@"MembershipCardViewController2"];
    if(MembershipCardCollectionPage)
    {
+       
        NSLog(@"MembershipCardCollectionPage is not nil");
       _indexOnScreen=index;
        NSLog(@"_indexOnScreen become %ld",(long)_indexOnScreen);
@@ -266,15 +267,10 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
     //set delegate to pageview
     [MembershipCardCollectionPage setDelegate:self];
-    return MembershipCardCollectionPage;
+    return    MembershipCardCollectionPage;
 }
 
-- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index withView:(UIView*) view{
-    
-    MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index];
-    mscvc.currentView=[[UIView alloc]initWithFrame:view.frame];
-     return  mscvc;
-}
+
 
 
  
@@ -300,14 +296,17 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 }
 
 -(NSInteger) presentationIndexForPageViewController:(UIPageViewController *)pageViewController{
+    
     return self.indexOnScreen;
 }
 
 -(void) pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed{
+
     if (completed) {
-        
-    
+        NSLog(@"I am finished");
     }
+    
+
 }
 
 #pragma mark gestureRecognizer
@@ -574,7 +573,6 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     
     return NO;
 }
-
 
 
 
