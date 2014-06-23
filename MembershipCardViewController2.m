@@ -114,7 +114,10 @@ NSString *kDetailViewControllerID=@"OneCardView";
 #pragma mark collectionView datasource
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return badgesCountInOnePage;
+    NSInteger value=badgesCountInOnePage;
+    NSInteger left=self.badgeInfos.badgesCount-self.index*badgesCountInOnePage;
+    if(left<badgesCountInOnePage)   value=left;
+    return value;
 }
 
 -(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

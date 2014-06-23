@@ -74,36 +74,37 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // _indexOnScreen=0;
-     [self initPageNumber];
+    [self initPageNumber];
     [self initPageControl];
+    [self setContent];
+    [self initLeftTopItems];
+    [self initTitle];
+    [ShareDriver shareInstances].myPageViewcontroller=self;
+   // [self initKVO];
+    self.delegate=self;
+
+}
+
+-(void) setContent{
     MembershipCardViewController2 *MembershipCardCollectionStartingPage=[self memberCardViewCotrollerAtIndex:_indexOnScreen];
-    NSLog(@"viewDidload happened2");
     if (MembershipCardCollectionStartingPage != nil)
     {
-        NSLog(@"MembershipCardCollectionStartingPage is not nil");
         self.dataSource = self;
         [self setViewControllers:@[MembershipCardCollectionStartingPage]
                        direction:UIPageViewControllerNavigationDirectionForward
                         animated:NO
                       completion:NULL];
         _collectionView=MembershipCardCollectionStartingPage.collectionView;
-      
+        
     }
     self.view.backgroundColor=[UIColor whiteColor];
-    [self initLeftTopItems];
-    [self initTitle];
-    [ShareDriver shareInstances].myPageViewcontroller=self;
+    
 }
-
 
 -(void) initGestureObserver{
     [self setDefaults];
-    [self addObserver:self forKeyPath:kLXCollectionViewKeyPath options:NSKeyValueObservingOptionNew context:nil];
-    _longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self
-                                                                                action:@selector(handleLongPressGesture:)];
+    _longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
     _longPressGestureRecognizer.delegate = self;
-    
     for (UIGestureRecognizer *gestureRecognizer in self.collectionView.gestureRecognizers) {
         if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]]) {
             [gestureRecognizer requireGestureRecognizerToFail:_longPressGestureRecognizer];
@@ -111,12 +112,10 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     }
     
     [self.view addGestureRecognizer:_longPressGestureRecognizer];
-    
     _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
                                                                     action:@selector(handlePanGesture:)];
-   _panGestureRecognizer.delegate = self;
+     _panGestureRecognizer.delegate = self;
     [self.view addGestureRecognizer:_panGestureRecognizer];
-    
     // Useful in multiple scenarios: one common scenario being when the Notification Center drawer is pulled down
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleApplicationWillResignActive:) name: UIApplicationWillResignActiveNotification object:nil];
     
@@ -126,6 +125,12 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 - (void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self initGestureObserver];
+    
+}
+
+-(void) initKVO{
+    
+    [self addObserver:self forKeyPath:@"viewControllers" options:NSKeyValueObservingOptionPrior  context:nil];
     
 }
 
@@ -151,8 +156,6 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     self. pageControl.pageIndicatorTintColor=[UIColor lightGrayColor];
     self.pageControl.currentPageIndicatorTintColor=[UIColor darkGrayColor];
     self.pageControl.backgroundColor=[UIColor whiteColor];
-    //    if(self.maxIndex==0) ;//
-    //[pageControl setHidesForSinglePage:NO];
     if(self.maxIndex==0)     self.pageControl.currentPageIndicatorTintColor=[UIColor whiteColor];
 }
 
@@ -223,13 +226,10 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     BOOL value=NO;
     if([self.selectedItemIndexPath isEqual:indexPath]) {
         value=YES;
-        NSLog(@"self.selectedItemIndexPath isEqual:indexPath:%d",indexPath.row);
+        NSLog(@"self.selectedItemIndexPath isEqual:indexPath:%ld",indexPath.row);
         
     }
-    
-    
-    
-    return value;
+     return value;
     
  }
 
@@ -301,13 +301,19 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 }
 
 -(void) pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed{
-
     if (completed) {
-        NSLog(@"I am finished");
+        if([self.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]]){
+            MembershipCardViewController2 *mscv2=(MembershipCardViewController2*) (self.viewControllers[0]);
+            self.collectionView=mscv2.collectionView;
+            
+        }
+       
     }
     
 
 }
+
+
 
 #pragma mark gestureRecognizer
 
@@ -337,6 +343,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
 - (void)invalidateLayoutIfNecessary {
     NSLog(@"begin invalidateIfNecessay");
+    if(self.selectedItemIndexPath==nil) return;
     NSIndexPath *newIndexPath = [self.collectionView indexPathForItemAtPoint:self.currentView.center];
     NSIndexPath *previousIndexPath = self.selectedItemIndexPath;
     
@@ -389,8 +396,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         case UIGestureRecognizerStateBegan: {
             NSLog(@"Long press begin");
             NSIndexPath *currentIndexPath = [self.collectionView indexPathForItemAtPoint:[gestureRecognizer locationInView:self.collectionView]];
-            NSLog(@"currentPath is %d",currentIndexPath.row);
-            self.selectedItemIndexPath = currentIndexPath;
+            NSLog(@"currentPath is %ld",currentIndexPath.row);
+            self.selectedItemIndexPath=currentIndexPath;
             UICollectionViewCell *collectionViewCell = [self.collectionView cellForItemAtIndexPath:self.selectedItemIndexPath];
             
             if(collectionViewCell==nil)
@@ -434,7 +441,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             //invalidate the data in the selected item
             UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:self.selectedItemIndexPath];
             cell.hidden=true;
-            NSLog(@"I am hidden in long press ,indexpath=%d" ,self.selectedItemIndexPath.row);
+            NSLog(@"I am hidden in long press ,indexpath=%ld" ,self.selectedItemIndexPath.row);
             [self.collectionView.collectionViewLayout invalidateLayout];
             
         } break;
@@ -470,7 +477,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
                          UICollectionViewCell *cell=[self.collectionView cellForItemAtIndexPath:currentIndexPath];
                          cell.hidden=false;
                         [strongSelf.collectionView.collectionViewLayout invalidateLayout];
-                         NSLog(@"I am not hidden any more indexpath=%d",currentIndexPath.row);
+                         NSLog(@"I am not hidden any more indexpath=%ld",(long)currentIndexPath.row);
 
                      }
                  }];
@@ -489,37 +496,15 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             NSLog(@"handle pan Gesture begin");
         case UIGestureRecognizerStateChanged: {
             NSLog(@"handle pan Gesture changed");
-            self.panTranslationInCollectionView = [gestureRecognizer translationInView:self.collectionView];
+            self.panTranslationInCollectionView = [gestureRecognizer translationInView:self.view];
             CGPoint viewCenter = self.currentView.center = LXS_CGPointAdd(self.currentViewCenter, self.panTranslationInCollectionView);
-            
-           // [self invalidateLayoutIfNecessary];
             [self performSelectorOnMainThread:@selector(invalidateLayoutIfNecessary) withObject:nil waitUntilDone:YES];
-            NSLog(@"after performselecoter");
             if (viewCenter.x < (CGRectGetMinX(self.collectionView.bounds) + self.scrollingTriggerEdgeInsets.left)) {
-                NSLog(@"do somthing ,horizontal");
-            } else {
-                if (viewCenter.x+12 > (CGRectGetMaxX(self.collectionView.bounds) - self.scrollingTriggerEdgeInsets.right)) {
-                   NSLog(@"do somthing ,horizontal");
-                    } else
-                    {   }
+                NSLog(@"do somthing ,horizontal to left");
             }
-            
-            //add scroll actions,only support horizontal direction
-            if (viewCenter.x> (CGRectGetMaxX(self.collectionView.bounds) - self.scrollingTriggerEdgeInsets.right)) {
-                NSLog(@" horizontal is happened, go to other pages");
-                 if([self.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]]){
-                    NSInteger index=((MembershipCardViewController2*)self.viewControllers[0]).index ;
-                    NSLog(@"indexOnScreen is %d",index);
-                    self.currentView.backgroundColor=[UIColor orangeColor];
-                    MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index+1];
-                    NSLog(@"index is %d",mscvc.index);
-                    [self setViewControllers:[NSArray arrayWithObject:mscvc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
-                        NSLog(@"navigate to other pages");
-                    }];
-                }
+            else if(viewCenter.x> (CGRectGetMaxX(self.collectionView.bounds) - self.scrollingTriggerEdgeInsets.right)) {
                 
-                
-                
+                [self performSelector:@selector(navigateToRightPage:) withObject:[NSValue valueWithCGPoint:viewCenter] afterDelay:1.0];
             }
             
         } break;
@@ -528,11 +513,31 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             NSLog(@"@pan gesture ended;");
         } break;
         default: {
-            // Do nothing...
         } break;
     }
 }
 
+
+
+
+-(void) navigateToRightPage:(id) value{
+    NSLog(@" I want to right page, waiting");
+    if(self.currentView==nil || self.collectionView==nil ) return;
+    CGPoint priorViewCenter=[value CGPointValue];
+    if(priorViewCenter.x!=self.currentView.center.x || priorViewCenter.y!=self.currentView.center.y) return;
+     if([self.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]]){
+        NSInteger index=((MembershipCardViewController2*)self.viewControllers[0]).index ;
+        self.currentView.backgroundColor=[UIColor orangeColor];
+        MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index+1];
+       self.selectedItemIndexPath=nil;
+        [self setViewControllers:[NSArray arrayWithObject:mscvc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
+            NSLog(@"navigate to other pages");
+        }];
+    }
+
+    
+    
+}
 #pragma mark - UICollectionViewLayout overridden methods ,NEED TO ADD TO CATEGORY
 
 
@@ -574,6 +579,14 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     return NO;
 }
 
+-(void)  observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+  //  NSLog(@"what happened?");
+    if([keyPath isEqualToString:@"viewControllers"]){
+        
+        NSLog(@"what happened?");
+    }
+    
+}
 
 
 #pragma mark - Notifications
