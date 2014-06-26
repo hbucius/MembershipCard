@@ -138,7 +138,7 @@ NSString *kDetailViewControllerID=@"OneCardView";
     if([self.delegate shouldHideAtIndexPath:indexPath] ) {
         cell.hidden=YES;
     }
-    NSLog(@"cellForItemAtIndexPath is ended ,indexpath=%d",indexPath.row);
+    NSLog(@"cellForItemAtIndexPath is ended ,indexpath=%ld",(long)indexPath.row);
      return cell;
 }
 
