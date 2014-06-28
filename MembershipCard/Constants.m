@@ -17,7 +17,8 @@ NSString * const DefaultCardName=@"Nike";
 NSString * const DefaultCardNumber=@"62220201220";
 NSString * const DefaultEmailText=@"邮箱地址/手机号";
 NSString * const DefaultPasswordText=@"请填写密码";
-
+NSString * const LeftDirection= @"left";
+NSString * const RightDiretion= @"right";
 BOOL  const DebugIng=YES;
 
 

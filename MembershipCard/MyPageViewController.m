@@ -57,7 +57,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 @property (assign, nonatomic) CGPoint currentViewCenter;
 @property  NSInteger lastLocation;
 @property  BOOL NavigateFromOther;
-@property  CGPoint lastViewCenter ;  //used to navigation to current pages.
+@property (strong,nonatomic) NSString * navigateDirection;
 @property (weak,nonatomic) UICollectionView *collectionView;
 @end
 
@@ -241,7 +241,7 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
 
 #pragma pageView delegate
 
-- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index{
+- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index {
     NSLog(@"parameter: self.maxIndex=%ld,index=%ld",(long)self.maxIndex,(long)index);
     //if the page number ==1 ,don't permit cycle from the last page to the first page or reverse.
     if (self.maxIndex==0 && index!=0)  return nil;
@@ -274,6 +274,12 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     return    MembershipCardCollectionPage;
 }
 
+- (MembershipCardViewController2 *)memberCardViewCotrollerAtIndex: (NSInteger) index  withLimit:(BOOL) limit{
+    if (limit && (index<0 || index>self.maxIndex)) return nil;
+    NSLog(@"self.maxIndex is %ld ,index is %ld",(long)self.maxIndex,(long)index);
+    return [self memberCardViewCotrollerAtIndex:index];
+    
+}
 
 
 
@@ -375,7 +381,11 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         if( newIndexPath == nil ) return;
         self.selectedItemIndexPath = newIndexPath;
         __block typeof(self) weakSelf = self;
-        NSIndexPath *path=[NSIndexPath indexPathForItem:0 inSection:0];
+        NSInteger itemNumber=0;
+        if([self.navigateDirection isEqualToString:LeftDirection]) itemNumber=badgesCountInOnePage-1;
+            else if ([self.navigateDirection isEqualToString:RightDiretion]) itemNumber=0;
+                else return;
+        NSIndexPath *path=[NSIndexPath indexPathForItem:itemNumber inSection:0];
         [self.collectionView performBatchUpdates:^{
             if (weakSelf) {
                 NSInteger index=((MembershipCardViewController2*)self.viewControllers[0]).index ;
@@ -527,15 +537,16 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             self.panTranslationInCollectionView = [gestureRecognizer translationInView:self.view];
             CGPoint viewCenter = self.currentView.center = LXS_CGPointAdd(self.currentViewCenter, self.panTranslationInCollectionView);
             [self performSelectorOnMainThread:@selector(invalidateLayoutIfNecessary) withObject:nil waitUntilDone:YES];
-            if (viewCenter.x < (CGRectGetMinX(self.collectionView.bounds) + self.scrollingTriggerEdgeInsets.left)) {
+            float delayTime=1.0;
+            if (viewCenter.x < (CGRectGetMinX(self.collectionView.bounds) + self.scrollingTriggerEdgeInsets.left) && [self canNavigateToDirection:LeftDirection]) {
                 NSLog(@"Wait for navigating to left page");
-                self.lastViewCenter=viewCenter;
-                 [self performSelector:@selector(navigateToLeftPage:) withObject:@"LEFT" afterDelay:1.0];
+                self.navigateDirection=LeftDirection;
+                [self performSelector:@selector(navigateByMoveCell:) withObject:[NSArray arrayWithObjects:[NSValue valueWithCGPoint:viewCenter],LeftDirection,nil] afterDelay:delayTime];
             }
-            else if(viewCenter.x> (CGRectGetMaxX(self.collectionView.bounds) - self.scrollingTriggerEdgeInsets.right)) {
+            else if(viewCenter.x> (CGRectGetMaxX(self.collectionView.bounds) - self.scrollingTriggerEdgeInsets.right) && [self canNavigateToDirection:RightDiretion]) {
                 NSLog(@"Wait for navigating to right page");
-                self.lastViewCenter=viewCenter;
-                [self performSelector:@selector(navigateToRightPage:) withObject:[NSValue valueWithCGPoint:viewCenter] afterDelay:1.0];
+                self.navigateDirection=RightDiretion;
+                [self performSelector:@selector(navigateByMoveCell:) withObject:[NSArray arrayWithObjects:[NSValue valueWithCGPoint:viewCenter],RightDiretion,nil] afterDelay:delayTime];
 
             }
             
@@ -549,74 +560,84 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
     }
 }
 
-
-
-
--(void) navigateToRightPage:(id) value{
-    NSLog(@" I want to right page, waiting");
-    if(self.currentView==nil || self.collectionView==nil ) return;
-    CGPoint priorViewCenter=[value CGPointValue];
-    if(priorViewCenter.x!=self.currentView.center.x || priorViewCenter.y!=self.currentView.center.y) return;
-     if([self.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]]){
-        NSInteger index=((MembershipCardViewController2*)self.viewControllers[0]).index ;
-        MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index+1];
-        self.lastLocation=[self.selectedItemIndexPath indexAtPosition:1]+index*badgesCountInOnePage;
-        self.selectedItemIndexPath=nil;
-         __block MyPageViewController *weakSelf=self;
-        [self setViewControllers:[NSArray arrayWithObject:mscvc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
-            if(finished)
-            {
-                //change collection view
-                UIViewController *vc=weakSelf.viewControllers[0];
-                if([vc isKindOfClass:[MembershipCardViewController2 class]]) {
-                    MembershipCardViewController2 *mvc2=(MembershipCardViewController2*) vc;
-                    weakSelf.collectionView=mvc2.collectionView;
-                    [weakSelf.collectionView addSubview:weakSelf.currentView];
-                    //other change
-                    weakSelf.NavigateFromOther=YES;
-
-                }
-                NSLog(@"collectionView are:%@",weakSelf.collectionView);
-            }
-        }];
-
- 
+-(BOOL) canNavigateToDirection:(NSString *) direction{
+    BOOL value=NO;
+    UIViewController *vc=self.viewControllers[0];
+    if ([vc isKindOfClass:[MembershipCardViewController2 class]]) {
+        MembershipCardViewController2 *mcv2=(MembershipCardViewController2*) vc;
+        NSUInteger index=mcv2.index;
+        if (index>0 && [direction isEqualToString:LeftDirection]) value=YES;
+        if(index<self.maxIndex &&[direction isEqualToString:RightDiretion]) value=YES;
+        
     }
-
+    return  value;
 }
 
--(void) navigateToLeftPage:(id) value{
-    NSLog(@" I want to right page, waiting");
+
+
+-(void) navigateByMoveCell:(id) value{
+    NSLog(@" I want to navigate, waiting");
+    if(![value isKindOfClass:[NSArray class]] )  return  ;
+    NSArray *para=(NSArray *) value;
+    if(para.count!=2 || (![para[0] isKindOfClass:[NSValue class]]) || (![para[1] isKindOfClass:[NSString class]])) return ;
     if(self.currentView==nil || self.collectionView==nil ) return;
-    CGPoint priorViewCenter=[value CGPointValue];
+    CGPoint priorViewCenter=[para[0] CGPointValue];
+    NSString *direction=(NSString *) para[1];
     if(priorViewCenter.x!=self.currentView.center.x || priorViewCenter.y!=self.currentView.center.y) return;
     if([self.viewControllers[0] isKindOfClass:[MembershipCardViewController2 class]]){
         NSInteger index=((MembershipCardViewController2*)self.viewControllers[0]).index ;
-        MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index+1];
         self.lastLocation=[self.selectedItemIndexPath indexAtPosition:1]+index*badgesCountInOnePage;
         self.selectedItemIndexPath=nil;
         __block MyPageViewController *weakSelf=self;
-        [self setViewControllers:[NSArray arrayWithObject:mscvc] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:^(BOOL finished) {
-            if(finished)
-            {
-                //change collection view
-                UIViewController *vc=weakSelf.viewControllers[0];
-                if([vc isKindOfClass:[MembershipCardViewController2 class]]) {
-                    MembershipCardViewController2 *mvc2=(MembershipCardViewController2*) vc;
-                    weakSelf.collectionView=mvc2.collectionView;
-                    [weakSelf.collectionView addSubview:weakSelf.currentView];
-                    //other change
-                    weakSelf.NavigateFromOther=YES;
-                    
+        if([direction isEqualToString:RightDiretion])
+        {
+            NSLog(@"I am going to right page");
+            MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index+1 ];
+            if(mscvc==nil) return;
+            [self setViewControllers:[NSArray arrayWithObject:mscvc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL finished) {
+                if(finished)
+                {
+                    //change collection view
+                    UIViewController *vc=weakSelf.viewControllers[0];
+                    if([vc isKindOfClass:[MembershipCardViewController2 class]]) {
+                        MembershipCardViewController2 *mvc2=(MembershipCardViewController2*) vc;
+                        weakSelf.collectionView=mvc2.collectionView;
+                        [weakSelf.collectionView addSubview:weakSelf.currentView];
+                        weakSelf.NavigateFromOther=YES;
+                    }
+                    NSLog(@"collectionView are:%@",weakSelf.collectionView);
                 }
-                NSLog(@"collectionView are:%@",weakSelf.collectionView);
-            }
-        }];
-        
-        
+            }];
+            
+        }
+        else if([direction isEqualToString:LeftDirection])
+        {
+            NSLog(@"I am going to lef page");
+            MembershipCardViewController2 *mscvc=[self memberCardViewCotrollerAtIndex:index-1 ];
+            if(mscvc==nil) return;
+            [self setViewControllers:[NSArray arrayWithObject:mscvc] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:^(BOOL finished) {
+                if(finished)
+                {
+                    //change collection view
+                    UIViewController *vc=weakSelf.viewControllers[0];
+                    if([vc isKindOfClass:[MembershipCardViewController2 class]]) {
+                        MembershipCardViewController2 *mvc2=(MembershipCardViewController2*) vc;
+                        weakSelf.collectionView=mvc2.collectionView;
+                        [weakSelf.collectionView addSubview:weakSelf.currentView];
+                        weakSelf.NavigateFromOther=YES;
+                    }
+                    NSLog(@"collectionView are:%@",weakSelf.collectionView);
+                }
+            }];
+            
+            
+        }
     }
     
 }
+
+
+
 
 #pragma mark - UICollectionViewLayout overridden methods ,NEED TO ADD TO CATEGORY
 

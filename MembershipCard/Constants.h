@@ -18,6 +18,8 @@ extern NSString * const DefaultCardName;
 extern NSString * const DefaultCardNumber;
 extern NSString * const DefaultEmailText;
 extern NSString * const DefaultPasswordText;
+extern NSString * const LeftDirection;
+extern NSString * const RightDiretion;
 
 extern BOOL  const DebugIng;
 
