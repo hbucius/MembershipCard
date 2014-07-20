@@ -17,6 +17,7 @@ extern NSString * const DefaultBadgeImage;
 extern NSString * const DefaultCardName;
 extern NSString * const DefaultCardNumber;
 extern NSString * const DefaultEmailText;
+extern NSString * const DefaultOnlyEmailText;
 extern NSString * const DefaultPasswordText;
 extern NSString * const LeftDirection;
 extern NSString * const RightDiretion;
