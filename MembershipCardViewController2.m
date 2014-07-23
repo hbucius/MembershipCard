@@ -131,6 +131,7 @@ NSString *kDetailViewControllerID=@"OneCardView";
     if(badge!=nil){
         cell.CellLabel.text=badge.badgeName;
         [cell.CellImage setBackgroundImage:[UIImage imageNamed:badge.badgeThumbImage] forState:UIControlStateNormal];
+        NSLog(@"badgeThumbImage is %@",badge.badgeThumbImage);
     }
     else {
         cell.hidden=YES;

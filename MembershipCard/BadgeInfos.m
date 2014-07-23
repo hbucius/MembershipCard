@@ -90,12 +90,14 @@ static BadgeInfos *sharedSingleton;
     self=[super init];
     if(self)
     {
-        NSArray *badgesNames=@[@"李宁",@"嘉和一品",@"老驴头",@"海底捞", @"乔丹",@"乙醇",@"麻辣香锅(知春路店)",@"老北京炸酱面",@"城隍庙小吃",@"樊家",@"庆丰包子1",@"庆丰包子2",@"庆丰包子3",@"李宁",@"嘉和一品",@"老驴头",@"海底捞", @"乔丹",@"乙醇",@"麻辣香锅(知春路店)",@"老北京炸酱面",@"城隍庙小吃",@"樊家",@"庆丰包子1",@"庆丰包子2",@"庆丰包子3"];
-       // NSArray *badgesNames=@[@"李宁",@"嘉和一品",@"老驴头",@"海底捞", @"乔丹",@"乙醇",@"麻辣香锅",@"老北京炸酱面",@"城隍庙小吃",@"樊家",@"庆丰包子1"];
-         NSArray *randomColors=@[[UIColor blueColor],[UIColor greenColor],[UIColor yellowColor],[UIColor magentaColor],[UIColor orangeColor],[UIColor purpleColor]];
-           for(NSString *badgeName in badgesNames){
-             UIColor *color=randomColors[arc4random()%randomColors.count];      
-               [Badge initWithName:badgeName WithbackgroundColor:color withBadgeThumbImage:DefaultThumbImage withBadgeImage:DefaultBadgeImage WithCardNumber:DefaultCardNumber withCardNumberLocation:[NSLocation right] withCardNmame:badgeName WithCardNameLocation:[NSLocation left] withCardContent:nil withContext:self.context];
+        NSArray *badgesNames=@[@"必胜客",@"拿渡",@"adidas",@"麦当劳",@"大嘴猴",@"星巴客",@"味千拉面",@"优衣库",@"宜家",@"Lee",@"汉堡王",@"一品三笑",@"KFC",@"小肥羊",@"乐扣",@"Kappa",@"相宜本草",@"Nike",@"必胜客",@"拿渡",@"adidas",@"麦当劳",@"大嘴猴",@"星巴客",@"味千拉面",@"优衣库"];
+        NSArray *imagePath=@[@"必胜客.jpg",@"nadu.jpg",@"阿迪.jpg",@"MC.jpg",@"dazuihou .jpg",@"星巴克.jpg",@"味千.jpg",@"uniqlo.png",@"yijia.jpg",@"Lee.jpg",@"汉堡王.jpg",@"一品三笑.jpg",@"kfc.jpg",@"xiaofeiyang.jpg",@"KEKOU.jpg",@"kapa.jpg",@"xiangyibencao.jpg",@"Nike.jpg"];
+        NSArray *randomColors=@[[UIColor blueColor],[UIColor greenColor],[UIColor yellowColor],[UIColor magentaColor],[UIColor orangeColor],[UIColor purpleColor]];
+        for(int i=0;i<badgesNames.count;i++){
+            NSString *badgeName=[badgesNames objectAtIndex:i];
+            NSString *ThumbImage=[imagePath objectAtIndex:i%imagePath.count];
+            UIColor *color=randomColors[arc4random()%randomColors.count];
+               [Badge initWithName:badgeName WithbackgroundColor:color withBadgeThumbImage:ThumbImage withBadgeImage:DefaultBadgeImage WithCardNumber:DefaultCardNumber withCardNumberLocation:[NSLocation right] withCardNmame:badgeName WithCardNameLocation:[NSLocation left] withCardContent:nil withContext:self.context];
        }
     }
     

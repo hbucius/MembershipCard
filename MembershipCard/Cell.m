@@ -24,7 +24,8 @@
     CALayer *btnLayer=[self.CellImage layer];
     [btnLayer setMasksToBounds:YES];
     [btnLayer setCornerRadius:10.0f];
-    [self.CellImage setBackgroundColor:[UIColor redColor]];
+    [self.CellImage setBackgroundColor:[UIColor clearColor]];
+    [self.CellLabel setBackgroundColor:[UIColor clearColor]];
     
 }
 
