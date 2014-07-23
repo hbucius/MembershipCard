@@ -69,6 +69,7 @@
 		5ADD9F9419801B3A005A5BA8 /* 必胜客.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ADD9F7C19801B3A005A5BA8 /* 必胜客.jpg */; };
 		5ADD9F9519801B3A005A5BA8 /* 星巴克.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ADD9F7D19801B3A005A5BA8 /* 星巴克.jpg */; };
 		5ADD9F9619801B3A005A5BA8 /* 汉堡王.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ADD9F7E19801B3A005A5BA8 /* 汉堡王.jpg */; };
+		5ADD9F9819801DFB005A5BA8 /* 阿迪.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ADD9F9719801DFB005A5BA8 /* 阿迪.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		5ADD9F7C19801B3A005A5BA8 /* 必胜客.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "必胜客.jpg"; sourceTree = "<group>"; };
 		5ADD9F7D19801B3A005A5BA8 /* 星巴克.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "星巴克.jpg"; sourceTree = "<group>"; };
 		5ADD9F7E19801B3A005A5BA8 /* 汉堡王.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "汉堡王.jpg"; sourceTree = "<group>"; };
+		5ADD9F9719801DFB005A5BA8 /* 阿迪.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "阿迪.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +372,7 @@
 		5ADD9F6619801B3A005A5BA8 /* thumb */ = {
 			isa = PBXGroup;
 			children = (
+				5ADD9F9719801DFB005A5BA8 /* 阿迪.jpg */,
 				5ADD9F6719801B3A005A5BA8 /* 2.JPG */,
 				5ADD9F6819801B3A005A5BA8 /* addidas.jpg */,
 				5ADD9F6919801B3A005A5BA8 /* Chnenel.jpg */,
@@ -508,6 +511,7 @@
 				5ADD9F8B19801B3A005A5BA8 /* Nike.jpg in Resources */,
 				5ADD9F8019801B3A005A5BA8 /* addidas.jpg in Resources */,
 				5ADD9F8D19801B3A005A5BA8 /* xiangyibencao.jpg in Resources */,
+				5ADD9F9819801DFB005A5BA8 /* 阿迪.jpg in Resources */,
 				5ADD9F9219801B3A005A5BA8 /* 味千.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,7 +684,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: HOU FENG (FJQ38MG464)";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MembershipCard/MembershipCard-Prefix.pch";
 				INFOPLIST_FILE = "MembershipCard/MembershipCard-Info.plist";
@@ -696,7 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: HOU FENG (FJQ38MG464)";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MembershipCard/MembershipCard-Prefix.pch";
 				INFOPLIST_FILE = "MembershipCard/MembershipCard-Info.plist";
